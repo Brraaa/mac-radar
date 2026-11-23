@@ -307,18 +307,29 @@ async function retailers() {
   for (const s of searches) {
     let html;
     try { html = await get(s.url); okCount++; } catch (e) { console.log(`[${s.name}] ${e.message}`); continue; }
-    const chunks = html.split(s.split).slice(1).map((c) => c.replace(/^[^<]*?>/, ""));
-    const at = html.search(/MacBook Pro[^<]{0,40}M5 Pro/i);
-    dbg("retailers", { name: s.name, url: s.url, len: html.length, chunks: chunks.length, first: chunks[0] ? stripTags(chunks[0].slice(0, 2000)).slice(0, 250) : null, around: at >= 0 ? html.slice(Math.max(0, at - 600), at + 1400) : null });
-    for (const c of chunks.slice(0, 40)) {
-      const text = stripTags(c.slice(0, 4000));
-      if (REFURB_RE.test(text) || /vendu par (?!amazon|fnac|darty|boulanger)/i.test(text)) continue;
-      const specs = parseSpecs(text);
-      if (!specs || !specs.price) continue;
-      const nameLink = c.match(/<a[^>]*href="([^"]+)"[^>]*>([^<]*MacBook[^<]*)<\/a>/i);
-      const href = nameLink ? nameLink[1] : (c.match(/href="([^"]+)"/) || [])[1];
-      const link = href ? new URL(decodeEntities(href), s.url).href.split("#")[0] : s.url;
-      items.push({ ...specs, title: (nameLink ? stripTags(nameLink[2]) : text).slice(0, 160), merchant: s.name, condition: "neuf", url: link, sourceUrl: s.url, source: s.name, fromRetailer: true });
+    // Texte visible de la page, découpé à chaque nom de produit « MacBook Pro »
+    const text = stripTags(html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<noscript[\s\S]*?<\/noscript>/gi, " "));
+    const starts = []; const nameRe = /(?:Apple\s+)?Mac\s?Book\s+Pro\b/gi; let nm;
+    while ((nm = nameRe.exec(text))) starts.push(nm.index);
+    const links = [...html.matchAll(/<a[^>]*href="([^"]+)"[^>]*>([^<]{0,200}MacBook Pro[^<]{0,200})<\/a>/gi)].map((x) => ({ href: x[1], name: stripTags(x[2]) }));
+    const segs = [];
+    for (let i = 0; i < starts.length; i++) {
+      const seg = text.slice(starts[i], Math.min(starts[i] + 700, starts[i + 1] ?? text.length));
+      if (seg.length < 25) continue;
+      segs.push(seg);
+    }
+    dbg("retailers", { name: s.name, len: html.length, segments: segs.length, samples: segs.filter((x) => /€/.test(x)).slice(0, 4).map((x) => x.slice(0, 260)) });
+    const seenSeg = new Set();
+    for (const seg of segs) {
+      if (REFURB_RE.test(seg) || /vendu (?:et expédié )?par (?!amazon|fnac|darty|boulanger|ldlc|materiel)/i.test(seg)) continue;
+      const specs = parseSpecs(seg);
+      if (!specs || !specs.price || specs.price < 1500) continue;
+      const name = seg.split(/\s(?=\d[\d\s]*[,.]?\d*\s?€)/)[0].slice(0, 160);
+      const k = specs.chip + specs.ram + specs.storage + specs.price;
+      if (seenSeg.has(k)) continue; seenSeg.add(k);
+      const lk = links.find((l) => name.toLowerCase().includes(l.name.toLowerCase().slice(0, 40)) || l.name.toLowerCase().includes(name.toLowerCase().slice(0, 40)));
+      const link = lk ? new URL(decodeEntities(lk.href), s.url).href.split("#")[0] : s.url;
+      items.push({ ...specs, title: name, merchant: s.name, condition: "neuf", url: link, sourceUrl: s.url, source: s.name, fromRetailer: true });
     }
   }
   if (!okCount) throw new Error("tous les revendeurs ont bloqué la requête");
