@@ -1,0 +1,387 @@
+{
+  "appleTiles": [
+    "Mac mini reconditionné avec puce Apple M4, CPU 10 cœurs, GPU 10 cœurs et Gigabit Ethernet | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>809,00 €\",\"raw_amount\":\"809.00\"} | {\"dimensionCapacity\":\"256gb\",\"refurbClearModel\":\"macmini\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 8 cœurs – Lumière stellaire | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 179,00 €\",\"raw_amount\":\"1179.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"starlight\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 8 cœurs – Bleu ciel | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 179,00 €\",\"raw_amount\":\"1179.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"skyblue\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M2, CPU 8 cœurs et GPU 10 cœurs - Gris sidéral | {\"amount\":\"1 389,00 €\",\"raw_amount\":\"1389.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2022\",\"dimensionColor\":\"space_gray\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M2, CPU 8 cœurs et GPU 10 cœurs - Lumière stellaire | {\"amount\":\"1 389,00 €\",\"raw_amount\":\"1389.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2022\",\"dimensionColor\":\"starlight\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M2, CPU 8 cœurs et GPU 10 cœurs - Minuit | {\"amount\":\"1 389,00 €\",\"raw_amount\":\"1389.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2022\",\"dimensionColor\":\"midnight\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Mauve | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 429,00 €\",\"raw_amount\":\"1429.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"purple\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs, Gigabit Ethernet - Bleu | {\"amount\":\"1 459,00 €\",\"raw_amount\":\"1459.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 469,00 €\",\"raw_amount\":\"1469.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Minuit | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 469,00 €\",\"raw_amount\":\"1469.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"midnight\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Bleu ciel | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 469,00 €\",\"raw_amount\":\"1469.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"skyblue\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 599,00 €\",\"raw_amount\":\"1599.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Jaune | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 599,00 €\",\"raw_amount\":\"1599.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"yellow\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Rose | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 599,00 €\",\"raw_amount\":\"1599.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"pink\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Argent | {\"amount\":\"1 619,00 €\",\"raw_amount\":\"1619.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Vert | {\"amount\":\"1 619,00 €\",\"raw_amount\":\"1619.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"green\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Bleu | {\"amount\":\"1 619,00 €\",\"raw_amount\":\"1619.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Bleu | {\"amount\":\"1 619,00 €\",\"raw_amount\":\"1619.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Orange | {\"amount\":\"1 619,00 €\",\"raw_amount\":\"1619.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"orange\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 659,00 €\",\"raw_amount\":\"1659.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "Studio Display Apple reconditionné, verre standard, support à inclinaison et hauteur réglables | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 739,00 €\",\"raw_amount\":\"1739.00\"} | {\"dimensionScreensize\":\"27inch\",\"refurbClearModel\":\"display\",\"dimensionRelYear\":\"2022\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Jaune | {\"amount\":\"1 789,00 €\",\"raw_amount\":\"1789.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"yellow\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs - Noir sidéral | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 849,00 €\",\"raw_amount\":\"1849.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 849,00 €\",\"raw_amount\":\"1849.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Argent | {\"amount\":\"1 899,00 €\",\"raw_amount\":\"1899.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Bleu | {\"amount\":\"1 899,00 €\",\"raw_amount\":\"1899.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 15 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Bleu ciel | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 909,00 €\",\"raw_amount\":\"1909.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"15inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"skyblue\",\"tsMemorySize\":\"24gb\"}",
+    "Studio Display Apple reconditionné, verre nano-texturé, support à inclinaison et hauteur réglables | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 909,00 €\",\"raw_amount\":\"1909.00\"} | {\"dimensionScreensize\":\"27inch\",\"refurbClearModel\":\"display\",\"dimensionRelYear\":\"2022\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Lumière stellaire | {\"amount\":\"1 939,00 €\",\"raw_amount\":\"1939.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"starlight\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 969,00 €\",\"raw_amount\":\"1969.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"1 989,00 €\",\"raw_amount\":\"1989.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs - Noir sidéral | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>2 039,00 €\",\"raw_amount\":\"2039.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"24gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>2 039,00 €\",\"raw_amount\":\"2039.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Argent | {\"amount\":\"2 069,00 €\",\"raw_amount\":\"2069.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Vert | {\"amount\":\"2 079,00 €\",\"raw_amount\":\"2079.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"green\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Argent | {\"amount\":\"2 159,00 €\",\"raw_amount\":\"2159.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Argent | {\"amount\":\"2 159,00 €\",\"raw_amount\":\"2159.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Mauve | {\"amount\":\"2 159,00 €\",\"raw_amount\":\"2159.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"purple\",\"tsMemorySize\":\"32gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"2 179,00 €\",\"raw_amount\":\"2179.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "MacBook Air 15 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Bleu ciel | {\"amount\":\"2 189,00 €\",\"raw_amount\":\"2189.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"15inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"skyblue\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Argent | {\"amount\":\"2 259,00 €\",\"raw_amount\":\"2259.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Rose | {\"amount\":\"2 259,00 €\",\"raw_amount\":\"2259.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"pink\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Argent | {\"amount\":\"2 439,00 €\",\"raw_amount\":\"2439.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Argent | {\"amount\":\"2 439,00 €\",\"raw_amount\":\"2439.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Bleu | {\"amount\":\"2 439,00 €\",\"raw_amount\":\"2439.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"32gb\"}",
+    "Mac mini reconditionné avec puce Apple M4 Pro, CPU 12 cœurs, GPU 16 cœurs et 10 Gigabit Ethernet | {\"amount\":\"2 449,00 €\",\"raw_amount\":\"2449.00\"} | {\"dimensionCapacity\":\"2tb\",\"refurbClearModel\":\"macmini\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "MacBook Air 15 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs – Bleu ciel | {\"amount\":\"2 459,00 €\",\"raw_amount\":\"2459.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"15inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"skyblue\",\"tsMemorySize\":\"32gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs - Noir sidéral | {\"amount\":\"2 509,00 €\",\"raw_amount\":\"2509.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"24gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs - Argent | {\"amount\":\"2 509,00 €\",\"raw_amount\":\"2509.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Argent | {\"amount\":\"2 619,00 €\",\"raw_amount\":\"2619.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Vert | {\"amount\":\"2 619,00 €\",\"raw_amount\":\"2619.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"green\",\"tsMemorySize\":\"32gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Bleu | {\"amount\":\"2 619,00 €\",\"raw_amount\":\"2619.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"32gb\"}",
+    "Mac mini reconditionné avec puce Apple M4 Pro, CPU 14 cœurs, GPU 20 cœurs et 10 Gigabit Ethernet | {\"amount\":\"2 729,00 €\",\"raw_amount\":\"2729.00\"} | {\"dimensionCapacity\":\"1tb\",\"refurbClearModel\":\"macmini\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Pro, CPU 15 cœurs et GPU 16 cœurs - Argent | {\"amount\":\"2 929,00 €\",\"raw_amount\":\"2929.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Pro, CPU 15 cœurs et GPU 16 cœurs - Noir sidéral | {\"amount\":\"2 929,00 €\",\"raw_amount\":\"2929.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"24gb\"}",
+    "Studio Display XDR reconditionné – Verre standard – Support à inclinaison et hauteur réglables | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>2 969,00 €\",\"raw_amount\":\"2969.00\"} | {\"dimensionScreensize\":\"27inch\",\"refurbClearModel\":\"display\",\"dimensionRelYear\":\"2026\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Pro, CPU 14 cœurs et GPU 20 cœurs - Noir sidéral | {\"amount\":\"3 069,00 €\",\"raw_amount\":\"3069.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "Studio Display XDR reconditionné – Verre nano-texturé – Support à inclinaison et hauteur réglables | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>3 229,00 €\",\"raw_amount\":\"3229.00\"} | {\"dimensionScreensize\":\"27inch\",\"refurbClearModel\":\"display\",\"dimensionRelYear\":\"2026\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Argent | {\"amount\":\"3 249,00 €\",\"raw_amount\":\"3249.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Max, CPU 14 cœurs et GPU 32 cœurs - Argent | {\"amount\":\"3 479,00 €\",\"raw_amount\":\"3479.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Max, CPU 14 cœurs et GPU 32 cœurs - Noir sidéral | {\"amount\":\"3 479,00 €\",\"raw_amount\":\"3479.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Air 15 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Lumière stellaire | {\"amount\":\"3 499,00 €\",\"raw_amount\":\"3499.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"15inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"starlight\",\"tsMemorySize\":\"32gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Pro, CPU 14 cœurs, GPU 20 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"3 719,00 €\",\"raw_amount\":\"3719.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Max, CPU 14 cœurs et GPU 32 cœurs - Argent | {\"amount\":\"3 739,00 €\",\"raw_amount\":\"3739.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Max, CPU 14 cœurs et GPU 32 cœurs - Noir sidéral | {\"amount\":\"3 739,00 €\",\"raw_amount\":\"3739.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"3 769,00 €\",\"raw_amount\":\"3769.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs et écran nano-texturé - Argent | {\"amount\":\"3 769,00 €\",\"raw_amount\":\"3769.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 32 cœurs - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 069,00 €\",\"raw_amount\":\"4069.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 32 cœurs - Noir sidéral | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 069,00 €\",\"raw_amount\":\"4069.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M3 Max, CPU 16 cœurs et GPU 40 cœurs - Noir sidéral | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 219,00 €\",\"raw_amount\":\"4219.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2023\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Max, CPU 16 cœurs et GPU 40 cœurs - Argent | {\"amount\":\"4 259,00 €\",\"raw_amount\":\"4259.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Max, CPU 16 cœurs et GPU 40 cœurs - Noir sidéral | {\"amount\":\"4 259,00 €\",\"raw_amount\":\"4259.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 32 cœurs - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 329,00 €\",\"raw_amount\":\"4329.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 32 cœurs - Noir sidéral | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 329,00 €\",\"raw_amount\":\"4329.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs, GPU 32 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"4 469,00 €\",\"raw_amount\":\"4469.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Pro, CPU 14 cœurs, GPU 20 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"4 649,00 €\",\"raw_amount\":\"4649.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 40 cœurs - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 839,00 €\",\"raw_amount\":\"4839.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 40 cœurs - Noir sidéral | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 839,00 €\",\"raw_amount\":\"4839.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Pro, CPU 14 cœurs, GPU 20 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"4 889,00 €\",\"raw_amount\":\"4889.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs, GPU 40 cœurs et écran nano-texturé - Argent | {\"amount\":\"4 979,00 €\",\"raw_amount\":\"4979.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Max, CPU 16 cœurs et GPU 40 cœurs - Argent | {\"amount\":\"5 819,00 €\",\"raw_amount\":\"5819.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"64gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Max, CPU 16 cœurs, GPU 40 cœurs et écran nano-texturé - Argent | {\"amount\":\"5 959,00 €\",\"raw_amount\":\"5959.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"64gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs, GPU 40 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"8 159,00 €\",\"raw_amount\":\"8159.00\"} | {\"dimensionCapacity\":\"8tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"64gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Max, CPU 16 cœurs, GPU 40 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"9 319,00 €\",\"raw_amount\":\"9319.00\"} | {\"dimensionCapacity\":\"8tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"128gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 40 cœurs - Noir sidéral | {\"amount\":\"9 509,00 €\",\"raw_amount\":\"9509.00\"} | {\"dimensionCapacity\":\"8tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"128gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Max, CPU 16 cœurs, GPU 40 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"9 539,00 €\",\"raw_amount\":\"9539.00\"} | {\"dimensionCapacity\":\"8tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"128gb\"}",
+    "Mac mini reconditionné avec puce Apple M4, CPU 10 cœurs, GPU 10 cœurs et Gigabit Ethernet | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>809,00 €\",\"raw_amount\":\"809.00\"} | {\"dimensionCapacity\":\"256gb\",\"refurbClearModel\":\"macmini\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 8 cœurs – Lumière stellaire | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 179,00 €\",\"raw_amount\":\"1179.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"starlight\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 8 cœurs – Bleu ciel | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 179,00 €\",\"raw_amount\":\"1179.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"skyblue\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M2, CPU 8 cœurs et GPU 10 cœurs - Gris sidéral | {\"amount\":\"1 389,00 €\",\"raw_amount\":\"1389.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2022\",\"dimensionColor\":\"space_gray\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M2, CPU 8 cœurs et GPU 10 cœurs - Lumière stellaire | {\"amount\":\"1 389,00 €\",\"raw_amount\":\"1389.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2022\",\"dimensionColor\":\"starlight\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M2, CPU 8 cœurs et GPU 10 cœurs - Minuit | {\"amount\":\"1 389,00 €\",\"raw_amount\":\"1389.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2022\",\"dimensionColor\":\"midnight\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Mauve | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 429,00 €\",\"raw_amount\":\"1429.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"purple\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs, Gigabit Ethernet - Bleu | {\"amount\":\"1 459,00 €\",\"raw_amount\":\"1459.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 469,00 €\",\"raw_amount\":\"1469.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Minuit | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 469,00 €\",\"raw_amount\":\"1469.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"midnight\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Bleu ciel | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 469,00 €\",\"raw_amount\":\"1469.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"skyblue\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 599,00 €\",\"raw_amount\":\"1599.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Jaune | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 599,00 €\",\"raw_amount\":\"1599.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"yellow\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Rose | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 599,00 €\",\"raw_amount\":\"1599.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"pink\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Argent | {\"amount\":\"1 619,00 €\",\"raw_amount\":\"1619.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Vert | {\"amount\":\"1 619,00 €\",\"raw_amount\":\"1619.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"green\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Bleu | {\"amount\":\"1 619,00 €\",\"raw_amount\":\"1619.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Bleu | {\"amount\":\"1 619,00 €\",\"raw_amount\":\"1619.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Orange | {\"amount\":\"1 619,00 €\",\"raw_amount\":\"1619.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"orange\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 659,00 €\",\"raw_amount\":\"1659.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "Studio Display Apple reconditionné, verre standard, support à inclinaison et hauteur réglables | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 739,00 €\",\"raw_amount\":\"1739.00\"} | {\"dimensionScreensize\":\"27inch\",\"refurbClearModel\":\"display\",\"dimensionRelYear\":\"2022\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Jaune | {\"amount\":\"1 789,00 €\",\"raw_amount\":\"1789.00\"} | {\"dimensionCapacity\":\"256gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"yellow\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs - Noir sidéral | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 849,00 €\",\"raw_amount\":\"1849.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 849,00 €\",\"raw_amount\":\"1849.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Argent | {\"amount\":\"1 899,00 €\",\"raw_amount\":\"1899.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Bleu | {\"amount\":\"1 899,00 €\",\"raw_amount\":\"1899.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Air 15 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Bleu ciel | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 909,00 €\",\"raw_amount\":\"1909.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"15inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"skyblue\",\"tsMemorySize\":\"24gb\"}",
+    "Studio Display Apple reconditionné, verre nano-texturé, support à inclinaison et hauteur réglables | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 909,00 €\",\"raw_amount\":\"1909.00\"} | {\"dimensionScreensize\":\"27inch\",\"refurbClearModel\":\"display\",\"dimensionRelYear\":\"2022\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Lumière stellaire | {\"amount\":\"1 939,00 €\",\"raw_amount\":\"1939.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"starlight\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>1 969,00 €\",\"raw_amount\":\"1969.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"1 989,00 €\",\"raw_amount\":\"1989.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs - Noir sidéral | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>2 039,00 €\",\"raw_amount\":\"2039.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"24gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>2 039,00 €\",\"raw_amount\":\"2039.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Argent | {\"amount\":\"2 069,00 €\",\"raw_amount\":\"2069.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 8 cœurs et GPU 8 cœurs - Vert | {\"amount\":\"2 079,00 €\",\"raw_amount\":\"2079.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"green\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Argent | {\"amount\":\"2 159,00 €\",\"raw_amount\":\"2159.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Argent | {\"amount\":\"2 159,00 €\",\"raw_amount\":\"2159.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Mauve | {\"amount\":\"2 159,00 €\",\"raw_amount\":\"2159.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"purple\",\"tsMemorySize\":\"32gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"2 179,00 €\",\"raw_amount\":\"2179.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "MacBook Air 15 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Bleu ciel | {\"amount\":\"2 189,00 €\",\"raw_amount\":\"2189.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"15inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"skyblue\",\"tsMemorySize\":\"16gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Argent | {\"amount\":\"2 259,00 €\",\"raw_amount\":\"2259.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Rose | {\"amount\":\"2 259,00 €\",\"raw_amount\":\"2259.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"pink\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Argent | {\"amount\":\"2 439,00 €\",\"raw_amount\":\"2439.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Argent | {\"amount\":\"2 439,00 €\",\"raw_amount\":\"2439.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet - Bleu | {\"amount\":\"2 439,00 €\",\"raw_amount\":\"2439.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"32gb\"}",
+    "Mac mini reconditionné avec puce Apple M4 Pro, CPU 12 cœurs, GPU 16 cœurs et 10 Gigabit Ethernet | {\"amount\":\"2 449,00 €\",\"raw_amount\":\"2449.00\"} | {\"dimensionCapacity\":\"2tb\",\"refurbClearModel\":\"macmini\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "MacBook Air 15 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs – Bleu ciel | {\"amount\":\"2 459,00 €\",\"raw_amount\":\"2459.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"15inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"skyblue\",\"tsMemorySize\":\"32gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs - Noir sidéral | {\"amount\":\"2 509,00 €\",\"raw_amount\":\"2509.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"24gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs - Argent | {\"amount\":\"2 509,00 €\",\"raw_amount\":\"2509.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Argent | {\"amount\":\"2 619,00 €\",\"raw_amount\":\"2619.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Vert | {\"amount\":\"2 619,00 €\",\"raw_amount\":\"2619.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"green\",\"tsMemorySize\":\"32gb\"}",
+    "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Bleu | {\"amount\":\"2 619,00 €\",\"raw_amount\":\"2619.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"32gb\"}",
+    "Mac mini reconditionné avec puce Apple M4 Pro, CPU 14 cœurs, GPU 20 cœurs et 10 Gigabit Ethernet | {\"amount\":\"2 729,00 €\",\"raw_amount\":\"2729.00\"} | {\"dimensionCapacity\":\"1tb\",\"refurbClearModel\":\"macmini\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Pro, CPU 15 cœurs et GPU 16 cœurs - Argent | {\"amount\":\"2 929,00 €\",\"raw_amount\":\"2929.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Pro, CPU 15 cœurs et GPU 16 cœurs - Noir sidéral | {\"amount\":\"2 929,00 €\",\"raw_amount\":\"2929.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"24gb\"}",
+    "Studio Display XDR reconditionné – Verre standard – Support à inclinaison et hauteur réglables | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>2 969,00 €\",\"raw_amount\":\"2969.00\"} | {\"dimensionScreensize\":\"27inch\",\"refurbClearModel\":\"display\",\"dimensionRelYear\":\"2026\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Pro, CPU 14 cœurs et GPU 20 cœurs - Noir sidéral | {\"amount\":\"3 069,00 €\",\"raw_amount\":\"3069.00\"} | {\"dimensionCapacity\":\"512gb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "Studio Display XDR reconditionné – Verre nano-texturé – Support à inclinaison et hauteur réglables | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>3 229,00 €\",\"raw_amount\":\"3229.00\"} | {\"dimensionScreensize\":\"27inch\",\"refurbClearModel\":\"display\",\"dimensionRelYear\":\"2026\"}",
+    "MacBook Air 13 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Argent | {\"amount\":\"3 249,00 €\",\"raw_amount\":\"3249.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"13inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Max, CPU 14 cœurs et GPU 32 cœurs - Argent | {\"amount\":\"3 479,00 €\",\"raw_amount\":\"3479.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Max, CPU 14 cœurs et GPU 32 cœurs - Noir sidéral | {\"amount\":\"3 479,00 €\",\"raw_amount\":\"3479.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Air 15 pouces reconditionné avec puce Apple M5, CPU 10 cœurs et GPU 10 cœurs – Lumière stellaire | {\"amount\":\"3 499,00 €\",\"raw_amount\":\"3499.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"15inch\",\"refurbClearModel\":\"macbookair\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"starlight\",\"tsMemorySize\":\"32gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Pro, CPU 14 cœurs, GPU 20 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"3 719,00 €\",\"raw_amount\":\"3719.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Max, CPU 14 cœurs et GPU 32 cœurs - Argent | {\"amount\":\"3 739,00 €\",\"raw_amount\":\"3739.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Max, CPU 14 cœurs et GPU 32 cœurs - Noir sidéral | {\"amount\":\"3 739,00 €\",\"raw_amount\":\"3739.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"3 769,00 €\",\"raw_amount\":\"3769.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5, CPU 10 cœurs, GPU 10 cœurs et écran nano-texturé - Argent | {\"amount\":\"3 769,00 €\",\"raw_amount\":\"3769.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2025\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 32 cœurs - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 069,00 €\",\"raw_amount\":\"4069.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 32 cœurs - Noir sidéral | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 069,00 €\",\"raw_amount\":\"4069.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M3 Max, CPU 16 cœurs et GPU 40 cœurs - Noir sidéral | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 219,00 €\",\"raw_amount\":\"4219.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2023\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Max, CPU 16 cœurs et GPU 40 cœurs - Argent | {\"amount\":\"4 259,00 €\",\"raw_amount\":\"4259.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Max, CPU 16 cœurs et GPU 40 cœurs - Noir sidéral | {\"amount\":\"4 259,00 €\",\"raw_amount\":\"4259.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 32 cœurs - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 329,00 €\",\"raw_amount\":\"4329.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 32 cœurs - Noir sidéral | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 329,00 €\",\"raw_amount\":\"4329.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs, GPU 32 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"4 469,00 €\",\"raw_amount\":\"4469.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"36gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Pro, CPU 14 cœurs, GPU 20 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"4 649,00 €\",\"raw_amount\":\"4649.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 40 cœurs - Argent | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 839,00 €\",\"raw_amount\":\"4839.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 40 cœurs - Noir sidéral | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>4 839,00 €\",\"raw_amount\":\"4839.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Pro, CPU 14 cœurs, GPU 20 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"4 889,00 €\",\"raw_amount\":\"4889.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs, GPU 40 cœurs et écran nano-texturé - Argent | {\"amount\":\"4 979,00 €\",\"raw_amount\":\"4979.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"48gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Max, CPU 16 cœurs et GPU 40 cœurs - Argent | {\"amount\":\"5 819,00 €\",\"raw_amount\":\"5819.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"64gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Max, CPU 16 cœurs, GPU 40 cœurs et écran nano-texturé - Argent | {\"amount\":\"5 959,00 €\",\"raw_amount\":\"5959.00\"} | {\"dimensionCapacity\":\"4tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"64gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs, GPU 40 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"8 159,00 €\",\"raw_amount\":\"8159.00\"} | {\"dimensionCapacity\":\"8tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"64gb\"}",
+    "MacBook Pro 14 pouces reconditionné avec puce Apple M4 Max, CPU 16 cœurs, GPU 40 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"9 319,00 €\",\"raw_amount\":\"9319.00\"} | {\"dimensionCapacity\":\"8tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"128gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M5 Max, CPU 18 cœurs et GPU 40 cœurs - Noir sidéral | {\"amount\":\"9 509,00 €\",\"raw_amount\":\"9509.00\"} | {\"dimensionCapacity\":\"8tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"128gb\"}",
+    "MacBook Pro 16 pouces reconditionné avec puce Apple M4 Max, CPU 16 cœurs, GPU 40 cœurs et écran nano-texturé - Noir sidéral | {\"amount\":\"9 539,00 €\",\"raw_amount\":\"9539.00\"} | {\"dimensionCapacity\":\"8tb\",\"dimensionScreensize\":\"16inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"128gb\"}"
+  ],
+  "dealabs": [
+    {
+      "q": "macbook pro m5 pro",
+      "len": 280691,
+      "vue": 340,
+      "threads": 0,
+      "titles": [],
+      "around": "e-center listLayout aGrid \"><div aria-busy=\"true\" class=\"js-vue3\" style=\"height:44px;\" data-handler=\"vue3\" data-vue3='{\"name\":\"TagsCarousel\",\"props\":{\"results\":[{\"threadGroupId\":61,\"threadGroupName\":\"MacBook Pro\",\"threadGroupUrlName\":\"apple-macbook-pro\",\"imageUrls\":{\"avatar.avatar_web_square_38\":\"/thread_groups/raw/avatar/61_1/re/38x38/qt/70/61_1.jpg\",\"avatar.avatar_web_square_38_2x\":\"/thread_groups/raw/avatar/61_1/re/76x76/qt/70/61_1.jpg\"}},{\"threadGroupId\":279,\"threadGroupName\":\"iPad Pro\",\"thr"
+    },
+    {
+      "q": "macbook pro m4 pro",
+      "len": 280111,
+      "vue": 340,
+      "threads": 0,
+      "titles": [],
+      "around": "e-center listLayout aGrid \"><div aria-busy=\"true\" class=\"js-vue3\" style=\"height:44px;\" data-handler=\"vue3\" data-vue3='{\"name\":\"TagsCarousel\",\"props\":{\"results\":[{\"threadGroupId\":61,\"threadGroupName\":\"MacBook Pro\",\"threadGroupUrlName\":\"apple-macbook-pro\",\"imageUrls\":{\"avatar.avatar_web_square_38\":\"/thread_groups/raw/avatar/61_1/re/38x38/qt/70/61_1.jpg\",\"avatar.avatar_web_square_38_2x\":\"/thread_groups/raw/avatar/61_1/re/76x76/qt/70/61_1.jpg\"}},{\"threadGroupId\":279,\"threadGroupName\":\"iPad Pro\",\"thr"
+    },
+    {
+      "q": "macbook pro m5 max",
+      "len": 118678,
+      "vue": 105,
+      "threads": 0,
+      "titles": [],
+      "around": "e-center listLayout aGrid \"><div aria-busy=\"true\" class=\"js-vue3\" style=\"height:44px;\" data-handler=\"vue3\" data-vue3='{\"name\":\"TagsCarousel\",\"props\":{\"results\":[{\"threadGroupId\":61,\"threadGroupName\":\"MacBook Pro\",\"threadGroupUrlName\":\"apple-macbook-pro\",\"imageUrls\":{\"avatar.avatar_web_square_38\":\"/thread_groups/raw/avatar/61_1/re/38x38/qt/70/61_1.jpg\",\"avatar.avatar_web_square_38_2x\":\"/thread_groups/raw/avatar/61_1/re/76x76/qt/70/61_1.jpg\"}},{\"threadGroupId\":2362,\"threadGroupName\":\"iPhone 16 Pro"
+    },
+    {
+      "q": "macbook pro m4 max",
+      "len": 64832,
+      "vue": 27,
+      "threads": 0,
+      "titles": [],
+      "around": "e-center listLayout aGrid \"><div aria-busy=\"true\" class=\"js-vue3\" style=\"height:44px;\" data-handler=\"vue3\" data-vue3='{\"name\":\"TagsCarousel\",\"props\":{\"results\":[{\"threadGroupId\":61,\"threadGroupName\":\"MacBook Pro\",\"threadGroupUrlName\":\"apple-macbook-pro\",\"imageUrls\":{\"avatar.avatar_web_square_38\":\"/thread_groups/raw/avatar/61_1/re/38x38/qt/70/61_1.jpg\",\"avatar.avatar_web_square_38_2x\":\"/thread_groups/raw/avatar/61_1/re/76x76/qt/70/61_1.jpg\"}},{\"threadGroupId\":2362,\"threadGroupName\":\"iPhone 16 Pro"
+    },
+    {
+      "q": "macbook pro m3 pro",
+      "len": 85669,
+      "vue": 60,
+      "threads": 0,
+      "titles": [],
+      "around": "e-center listLayout aGrid \"><div aria-busy=\"true\" class=\"js-vue3\" style=\"height:44px;\" data-handler=\"vue3\" data-vue3='{\"name\":\"TagsCarousel\",\"props\":{\"results\":[{\"threadGroupId\":61,\"threadGroupName\":\"MacBook Pro\",\"threadGroupUrlName\":\"apple-macbook-pro\",\"imageUrls\":{\"avatar.avatar_web_square_38\":\"/thread_groups/raw/avatar/61_1/re/38x38/qt/70/61_1.jpg\",\"avatar.avatar_web_square_38_2x\":\"/thread_groups/raw/avatar/61_1/re/76x76/qt/70/61_1.jpg\"}},{\"threadGroupId\":279,\"threadGroupName\":\"iPad Pro\",\"thr"
+    },
+    {
+      "q": "macbook pro m3 max",
+      "len": 86836,
+      "vue": 60,
+      "threads": 0,
+      "titles": [],
+      "around": "e-center listLayout aGrid \"><div aria-busy=\"true\" class=\"js-vue3\" style=\"height:44px;\" data-handler=\"vue3\" data-vue3='{\"name\":\"TagsCarousel\",\"props\":{\"results\":[{\"threadGroupId\":61,\"threadGroupName\":\"MacBook Pro\",\"threadGroupUrlName\":\"apple-macbook-pro\",\"imageUrls\":{\"avatar.avatar_web_square_38\":\"/thread_groups/raw/avatar/61_1/re/38x38/qt/70/61_1.jpg\",\"avatar.avatar_web_square_38_2x\":\"/thread_groups/raw/avatar/61_1/re/76x76/qt/70/61_1.jpg\"}},{\"threadGroupId\":2378,\"threadGroupName\":\"iPhone 18 Pro"
+    }
+  ],
+  "news": [
+    {
+      "feed": "https://news.google.com/rss/search?q=%22MacBook%20Pro%22%20%22M5%20Pro%22%20prix%20when%3A",
+      "len": 11939,
+      "items": 8,
+      "titles": [
+        "Le Black Friday atteint même les MacBook et les Mac mini : voici lees meilleures remises sur les ordinateurs d’Apple - Frandroid",
+        "Guide : Quels sont les meilleurs ordinateurs / PC portables ? Novembre 2026 - Les Numériques",
+        "Black Friday : jusqu’à 20 % de réduction sur le Mac mini M6 - MacGeneration",
+        "Black Friday PC portable : les baisses de prix en direct - LaptopSpirit"
+      ]
+    },
+    {
+      "feed": "https://www.bing.com/news/search?q=%22MacBook%20Pro%22%20%22M5%20Pro%22%20prix&format=rss&",
+      "len": 9584,
+      "items": 10,
+      "titles": [
+        "Les prix des MacBook Pro M5 et M6 ont été annoncés",
+        "MacBook Pro M5, M6 et OLED tactile, comment choisir son Mac portable",
+        "Test des MacBook Pro PROLED XDR : le changement, c’est maintenant ?",
+        "Promo Apple : Amazon casse le prix du MacBook Pro 16 M5 Pro, sous les 3000€"
+      ]
+    },
+    {
+      "feed": "https://news.google.com/rss/search?q=%22MacBook%20Pro%22%20%22M4%20Pro%22%20promo%20when%3",
+      "len": 1186,
+      "items": 0,
+      "titles": []
+    },
+    {
+      "feed": "https://www.bing.com/news/search?q=%22MacBook%20Pro%22%20%22M4%20Pro%22%20promo&format=rss",
+      "len": 6188,
+      "items": 6,
+      "titles": [
+        "Promo Apple : alors que le tout nouveau MacBook Pro M5 Pro vient de sortir, le modèle avec puce M4 Pro chute de -12%",
+        "Apple : depuis la sortie des modèles M5, le MacBook Pro M4 Pro se vend par palettes et on comprend pourquoi avec cette promo pour les ventes flash Amazon",
+        "Apple MacBook Pro 14 (M4 Pro)",
+        "Un boîtier Thunderbolt 5 en promo à 170 €, pour profiter d’un SSD externe à 6 Go/s"
+      ]
+    },
+    {
+      "feed": "https://news.google.com/rss/search?q=%22MacBook%20Pro%22%20%22M5%20Max%22%20promo%20when%3",
+      "len": 13639,
+      "items": 9,
+      "titles": [
+        "Le Black Friday atteint même les MacBook et les Mac mini : voici lees meilleures remises sur les ordinateurs d’Apple - Frandroid",
+        "Le MacBook Air M6 pourrait être lancé dès mars 2027 - Consomac",
+        "Black Friday : voici le TOP 7 des meilleurs PC portables en promo - Frandroid",
+        "Guide : Quels sont les meilleurs ordinateurs / PC portables ? Novembre 2026 - Les Numériques"
+      ]
+    },
+    {
+      "feed": "https://www.bing.com/news/search?q=%22MacBook%20Pro%22%20%22M5%20Max%22%20promo&format=rss",
+      "len": 7611,
+      "items": 8,
+      "titles": [
+        "MacBook Pro M5 Pro et M5 Max",
+        "Les meilleures promos Black Friday de la semaine : TV, HONOR 600 Pro, MacBook Pro M5 Max, HONOR MagicPad4...",
+        "Watch Apple’s promo video for the new MacBook Pro with PROLED XDR Display",
+        "Le MacBook Pro M6 est lancé, mais le 16\" M5 Max est bradé à -22% chez Amazon 🔥"
+      ]
+    },
+    {
+      "feed": "https://news.google.com/rss/search?q=%22MacBook%20Pro%22%20%22M4%20Max%22%20promo%20when%3",
+      "len": 1186,
+      "items": 0,
+      "titles": []
+    },
+    {
+      "feed": "https://www.bing.com/news/search?q=%22MacBook%20Pro%22%20%22M4%20Max%22%20promo&format=rss",
+      "len": 5072,
+      "items": 5,
+      "titles": [
+        "Promo MacBook Pro : attention ce sont les derniers exemplaires en réduction de la version M4 Maxx avec écran Liquid Retina XDR",
+        "Apple MacBook Pro 14 (M4 Max)",
+        "MacBook Pro M5 Pro et M5 Max",
+        "Apple MacBook Pro M4 Max"
+      ]
+    },
+    {
+      "feed": "https://news.google.com/rss/search?q=%22MacBook%20Pro%22%20bon%20plan%20when%3A2d&hl=fr&gl",
+      "len": 14058,
+      "items": 9,
+      "titles": [
+        "À peine sorti, le MacBook Pro 14 M6 d’Apple perd déjà 200 € pour le Black Friday - Frandroid",
+        "200 € de remise sur les MacBook Pro avec puce M6 - Consomac",
+        "Le Black Friday atteint même les MacBook et les Mac mini : voici lees meilleures remises sur les ordinateurs d’Apple - Frandroid",
+        "Black Friday smartphone : Samsung, Google, Motorola... le top 20 des bons plans - Frandroid"
+      ]
+    },
+    {
+      "feed": "https://www.bing.com/news/search?q=%22MacBook%20Pro%22%20bon%20plan&format=rss&setlang=fr-",
+      "len": 6024,
+      "items": 5,
+      "titles": [
+        "Et voilà : ce MacBook Pro s'écoule par conteneurs depuis qu'il a atteint ce prix ultime",
+        "Bon plan – L'ordinateur Portable Apple MacBook Pro 14 (M5 Pro) 24 Go / 1 To \"5 étoiles\" à 2 331,94 €",
+        "Le MacBook Pro M5 est à prix bas pour une durée très limitée sur le site de la FNAC",
+        "Il passe de 1749 € à 409 € : Il ne reste plus beaucoup de temps pour saisir ce MacBook Pro à ce prix"
+      ]
+    },
+    {
+      "feed": "https://news.google.com/rss/search?q=%22MacBook%20Pro%22%20Black%20Friday%20when%3A2d&hl=f",
+      "len": 39687,
+      "items": 26,
+      "titles": [
+        "Black Friday : ce MacBook Pro passe de 1449 à 598 € et bouscule le marché des PC portables ce lundi - Ouest-France",
+        "À peine sorti, le MacBook Pro 14 M6 d’Apple perd déjà 200 € pour le Black Friday - Frandroid",
+        "Black Friday : jusqu’à 20 % de réduction sur le Mac mini M6 - MacGeneration",
+        "À l'occasion du Black Friday 2026, ce PC Apple noté 5/5 s'allège de 200,00 € - Les Numériques"
+      ]
+    },
+    {
+      "feed": "https://www.bing.com/news/search?q=%22MacBook%20Pro%22%20Black%20Friday&format=rss&setlang",
+      "len": 9317,
+      "items": 9,
+      "titles": [
+        "Black Friday Apple : MacBook Air ou MacBook Pro, quel modèle reconditionné acheter ?",
+        "Pendant le Black Friday, quel MacBook acheter en promo ?",
+        "Comment le MacBook Pro peut-il avoir son prix qui baisse de plus de 874 euros en novembre 2026 ?",
+        "Bon plan Black Friday : le MacBook Air M5 13 pouces (16 Go, 512 Go) à 1199 euros sur Amazon"
+      ]
+    }
+  ],
+  "retailers": [
+    {
+      "name": "LDLC",
+      "url": "https://www.ldlc.com/recherche/macbook%20pro%20m5%20pro/",
+      "len": 214625,
+      "chunks": 30,
+      "first": "search-analytics#trackListingProduct auxclick->search-analytics#trackListingProduct\" > Apple MacBook Pro M5 Pro 14\" Noir sidéral (2026) 24 Go/1 To (MGDR4FN/A) Puce Apple M5 Pro CPU 15 coeurs (GPU 16 coeurs) 24 Go SSD 1 To 14\" LED Liquid Retina XDR Wi"
+    },
+    {
+      "name": "LDLC",
+      "url": "https://www.ldlc.com/recherche/macbook%20pro%20m4%20pro/",
+      "len": 209445,
+      "chunks": 30,
+      "first": "search-analytics#trackListingProduct auxclick->search-analytics#trackListingProduct\" > Reconditionné Apple MacBook Pro M4 14\" Noir sidéral 16 Go/512 Go (MW2U3FN/A) Puce Apple M4 CPU 10 coeurs (GPU 10 coeurs) 16 Go SSD 512 Go 14\" LED Liquid Retina XDR"
+    },
+    {
+      "name": "Materiel.net",
+      "url": "https://www.materiel.net/recherche/macbook%20pro%20m5%20pro/",
+      "len": 233866,
+      "chunks": 23,
+      "first": "search-analytics#trackListingProduct auxclick->search-analytics#trackListingProduct\" data-insights-object-id=\"AR202603040031\" data-insights-position=\"1\" data-insights-query-id=\"f517f38a-c8fe-4b76-bf0b-e3ac0d73d415\" > Promotion Apple MacBook Pro M5 Pr"
+    },
+    {
+      "name": "Boulanger",
+      "url": "https://www.boulanger.com/resultats?tr=macbook+pro+m5+pro",
+      "len": 743022,
+      "chunks": 63,
+      "first": "<a href=\"/ref/1248913\" class=\"product-list__product-image-link analytic-track-origin\" data-tracking-origin=\"searchResult\" data-tracking-action=\"clicProduit\" data-tracking-label=\"clicProduit\" data-with-redirect=\"true\" aria-labelledby=\"productLabel\" da"
+    },
+    {
+      "name": "Fnac",
+      "url": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=macbook+pro+m5+pro",
+      "len": 429375,
+      "chunks": 259,
+      "first": "<form"
+    }
+  ]
+}
