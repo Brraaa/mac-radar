@@ -191,9 +191,9 @@ function appleParse(html, url) {
 // 2) Dealabs : pages de recherche (données JSON « data-vue3 » de chaque deal), avec repli RSS
 function dealabsThreadsFromHtml(html) {
   const out = [];
-  const re = /data-vue[23]="([^"]+)"/g; let m;
+  const re = /data-vue[23]=(?:"([^"]+)"|'([^']+)')/g; let m;
   while ((m = re.exec(html))) {
-    let obj; try { obj = JSON.parse(decodeEntities(m[1])); } catch { continue; }
+    let obj; try { obj = JSON.parse(decodeEntities(m[1] || m[2])); } catch { continue; }
     const th = obj && obj.props && obj.props.thread;
     if (!th || !th.title) continue;
     out.push(th);
@@ -308,7 +308,8 @@ async function retailers() {
     let html;
     try { html = await get(s.url); okCount++; } catch (e) { console.log(`[${s.name}] ${e.message}`); continue; }
     const chunks = html.split(s.split).slice(1).map((c) => c.replace(/^[^<]*?>/, ""));
-    dbg("retailers", { name: s.name, url: s.url, len: html.length, chunks: chunks.length, first: chunks[0] ? stripTags(chunks[0].slice(0, 2000)).slice(0, 250) : null });
+    const at = html.search(/MacBook Pro[^<]{0,40}M5 Pro/i);
+    dbg("retailers", { name: s.name, url: s.url, len: html.length, chunks: chunks.length, first: chunks[0] ? stripTags(chunks[0].slice(0, 2000)).slice(0, 250) : null, around: at >= 0 ? html.slice(Math.max(0, at - 600), at + 1400) : null });
     for (const c of chunks.slice(0, 40)) {
       const text = stripTags(c.slice(0, 4000));
       if (REFURB_RE.test(text) || /vendu par (?!amazon|fnac|darty|boulanger)/i.test(text)) continue;
