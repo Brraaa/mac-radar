@@ -1,6 +1,6 @@
 {
-  "lastScan": "2026-11-23T14:55:13.773Z",
-  "summary": "0 offre dans le budget",
+  "lastScan": "2026-11-23T14:57:23.775Z",
+  "summary": "1 offre dans le budget",
   "budget": 2600,
   "minRam": 24,
   "sources": {
@@ -10,7 +10,7 @@
     },
     "Dealabs": {
       "ok": true,
-      "count": 0
+      "count": 2
     },
     "Actus (Google/Bing)": {
       "ok": true,
@@ -43,8 +43,8 @@
       "temperature": null,
       "note": null,
       "foundAt": "2026-11-23T14:55:13.773Z",
-      "checkedAt": "2026-11-23T14:55:13.773Z",
-      "lastSeen": "2026-11-23T14:55:13.773Z"
+      "checkedAt": "2026-11-23T14:57:23.775Z",
+      "lastSeen": "2026-11-23T14:57:23.775Z"
     },
     {
       "id": "ldlc-m5pro-14-24-1to-2899",
@@ -67,8 +67,32 @@
       "temperature": null,
       "note": "Clavier QWERTY ou QWERTZ (vendu hors de France).",
       "foundAt": "2026-11-23T14:55:13.773Z",
-      "checkedAt": "2026-11-23T14:55:13.773Z",
-      "lastSeen": "2026-11-23T14:55:13.773Z"
+      "checkedAt": "2026-11-23T14:57:23.775Z",
+      "lastSeen": "2026-11-23T14:57:23.775Z"
+    },
+    {
+      "id": "boulanger-m5pro-14-24-1to-2599",
+      "chip": "M5 Pro",
+      "gen": "M5",
+      "tier": "Pro",
+      "cpuGpu": "15/16",
+      "size": 14,
+      "ram": 24,
+      "storage": "1 To",
+      "price": 2599,
+      "oldPrice": 2899,
+      "merchant": "Boulanger",
+      "condition": "neuf",
+      "status": "to_verify",
+      "url": "https://www.dealabs.com/share-deal/3463391",
+      "sourceUrl": "https://www.dealabs.com/share-deal/3463391",
+      "source": "Dealabs",
+      "title": "PC Portable 14\" Apple Macbook Pro Liquid Retina XDR M5 Pro - CPU 15 coeurs / GPU 16 coeurs, 24 Go RAM, SSD 1 To",
+      "temperature": 348,
+      "note": null,
+      "foundAt": "2026-11-23T14:57:23.775Z",
+      "checkedAt": "2026-11-23T14:57:23.775Z",
+      "lastSeen": "2026-11-23T14:57:23.775Z"
     }
   ]
 }
