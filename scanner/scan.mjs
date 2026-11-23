@@ -473,7 +473,7 @@ async function main() {
     const age = NOW - new Date(d.lastSeen || d.checkedAt || 0);
     if (d.condition === "reco-apple" && appleOk) { d.status = "expired"; d.checkedAt = NOW.toISOString(); d.verifyNote = "N'est plus en vente sur l'Apple Store."; }
     else if (age > 48 * 3600e3) { d.status = "expired"; d.checkedAt = NOW.toISOString(); }
-    else if (d.status === "active" && d.price <= BUDGET) { d.listingInStock = false; candidates.push(d); }   // re-vérifier les offres validées
+    else if (d.condition !== "reco-apple" && d.price <= BUDGET) { d.listingInStock = false; candidates.push(d); }   // re-vérifier toute offre au budget non revue
   }
 
   // Vérification en direct sur la page du vendeur, pour toute offre (hors reconditionné Apple) au prix du budget
