@@ -19,6 +19,8 @@ const NOW = new Date();
 const TEST_PUSH = process.env.TEST_PUSH === "true";
 const DEBUG = process.env.DEBUG === "true";
 
+const DBG = {};
+function dbg(k, v) { if (DEBUG) { (DBG[k] = DBG[k] || []).push(v); } }
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15";
 
 function readJson(file, fallback) {
@@ -134,19 +136,28 @@ async function runSource(name, fn) {
 
 // 1) Apple Reconditionné France (JSON embarqué dans la page)
 async function appleRefurb() {
-  const url = "https://www.apple.com/fr/shop/refurbished/mac/macbook-pro";
-  const html = await get(url);
+  const items = []; const seenUrl = new Set(); let fetched = 0;
+  for (const url of ["https://www.apple.com/fr/shop/refurbished/mac/macbook-pro", "https://www.apple.com/fr/shop/browse/home/specialdeals/mac/macbook_pro"]) {
+    let html; try { html = await get(url); fetched++; } catch (e) { dbg("apple", { url, error: e.message }); continue; }
+    for (const it of appleParse(html, url)) { if (!seenUrl.has(it.url + it.price)) { seenUrl.add(it.url + it.price); items.push(it); } }
+  }
+  if (!fetched) throw new Error("page Apple injoignable");
+  return items;
+}
+function appleParse(html, url) {
   const items = [];
   const m = html.match(/REFURB_GRID_BOOTSTRAP\s*=\s*(\{[\s\S]*?\});\s*<\/script>/);
   if (m) {
     const data = JSON.parse(m[1]);
     for (const tile of data.tiles || []) {
       const title = decodeEntities(tile.title || "");
+      dbg("appleTiles", `${title} | ${JSON.stringify(tile.price && tile.price.currentPrice)} | ${JSON.stringify(tile.filters && tile.filters.dimensions)}`.slice(0, 400));
+      if (!/macbook\s*pro/i.test(title)) continue;
       const dims = (tile.filters && tile.filters.dimensions) || {};
       const raw = tile.price && tile.price.currentPrice && (tile.price.currentPrice.raw_amount || tile.price.currentPrice.amount);
       const price = raw ? parseFloat(String(raw).replace(/[^\d.,]/g, "").replace(/\s/g, "").replace(",", ".")) : null;
       const prev = tile.price && tile.price.previousPrice && (tile.price.previousPrice.raw_amount || tile.price.previousPrice.previousPrice);
-      const specs = parseSpecs("MacBook Pro " + title) || {};
+      const specs = parseSpecs(title) || {};
       if (!specs.chip) continue;
       const ramDim = String(dims.tsMemorySize || "").match(/(\d+)/);
       const capDim = String(dims.dimensionCapacity || "").match(/(\d+)\s*(gb|tb)/i);
@@ -165,10 +176,11 @@ async function appleRefurb() {
     }
   } else {
     // Secours : titres + prix bruts
-    const re = /reconditionné avec puce Apple (M[345] (?:Pro|Max))[^<]*<[\s\S]{0,600}?(\d[\d\s ]*,\d{2})\s?€/g;
+    dbg("apple", { url, note: "pas de REFURB_GRID_BOOTSTRAP", len: html.length, sample: html.slice(0, 300) });
+    const re = /MacBook Pro[^<]{0,60}reconditionné avec puce Apple (M[345] (?:Pro|Max))[^<]*<[\s\S]{0,600}?(\d[\d\s ]*,\d{2})\s?€/g;
     let x;
     while ((x = re.exec(html))) {
-      const specs = parseSpecs("MacBook Pro " + x[0].replace(/<[^>]+>/g, " ")) || {};
+      const specs = parseSpecs(x[0].replace(/<[^>]+>/g, " ")) || {};
       if (!specs.chip) continue;
       items.push({ ...specs, merchant: "Apple Reconditionné", condition: "reco-apple", url, sourceUrl: url, source: "Apple Reconditionné", confirmed: true, title: stripTags(x[0]).slice(0, 160) });
     }
@@ -196,6 +208,7 @@ async function dealabs() {
     let html;
     try { html = await get(url); fetched++; } catch (e) { console.log(`[Dealabs] ${q} : ${e.message}`); continue; }
     const threads = dealabsThreadsFromHtml(html);
+    dbg("dealabs", { q, len: html.length, vue: (html.match(/data-vue[23]=/g) || []).length, threads: threads.length, titles: threads.slice(0, 5).map((t) => t.title), around: html.slice(Math.max(0, html.indexOf("MacBook") - 200), html.indexOf("MacBook") + 300) });
     if (DEBUG) console.log(`[Dealabs] ${q} : ${threads.length} deals lus`);
     for (const th of threads) {
       const published = th.publishedAt ? new Date(th.publishedAt * 1000) : null;
@@ -261,7 +274,9 @@ async function newsFeeds() {
     ];
     for (const f of feeds) {
       let xml; try { xml = await get(f, { accept: "application/rss+xml,application/xml,text/xml" }); fetched++; } catch (e) { console.log(`[Actus] ${e.message}`); continue; }
-      for (const it of rssItems(xml)) {
+      const rssList = rssItems(xml);
+      dbg("news", { feed: f.slice(0, 90), len: xml.length, items: rssList.length, titles: rssList.slice(0, 4).map((i) => i.title) });
+      for (const it of rssList) {
         if (it.date && NOW - new Date(it.date) > 2 * 86400e3) continue;
         const text = `${it.title} ${it.description}`;
         const specs = parseSpecs(text);
@@ -292,15 +307,17 @@ async function retailers() {
   for (const s of searches) {
     let html;
     try { html = await get(s.url); okCount++; } catch (e) { console.log(`[${s.name}] ${e.message}`); continue; }
-    const chunks = html.split(s.split).slice(1);
+    const chunks = html.split(s.split).slice(1).map((c) => c.replace(/^[^<]*?>/, ""));
+    dbg("retailers", { name: s.name, url: s.url, len: html.length, chunks: chunks.length, first: chunks[0] ? stripTags(chunks[0].slice(0, 2000)).slice(0, 250) : null });
     for (const c of chunks.slice(0, 40)) {
       const text = stripTags(c.slice(0, 4000));
       if (REFURB_RE.test(text) || /vendu par (?!amazon|fnac|darty|boulanger)/i.test(text)) continue;
       const specs = parseSpecs(text);
       if (!specs || !specs.price) continue;
-      const href = (c.match(/href="([^"]+)"/) || [])[1];
+      const nameLink = c.match(/<a[^>]*href="([^"]+)"[^>]*>([^<]*MacBook[^<]*)<\/a>/i);
+      const href = nameLink ? nameLink[1] : (c.match(/href="([^"]+)"/) || [])[1];
       const link = href ? new URL(decodeEntities(href), s.url).href.split("#")[0] : s.url;
-      items.push({ ...specs, title: text.slice(0, 160), merchant: s.name, condition: "neuf", url: link, sourceUrl: s.url, source: s.name, fromRetailer: true });
+      items.push({ ...specs, title: (nameLink ? stripTags(nameLink[2]) : text).slice(0, 160), merchant: s.name, condition: "neuf", url: link, sourceUrl: s.url, source: s.name, fromRetailer: true });
     }
   }
   if (!okCount) throw new Error("tous les revendeurs ont bloqué la requête");
@@ -382,6 +399,7 @@ async function main() {
     budget: BUDGET, minRam: MIN_RAM, sources, deals,
   });
   writeJson(SEEN_FILE, seen);
+  if (DEBUG) writeJson(path.join(ROOT, "data", "debug.json"), DBG);
   console.log(`Scan terminé : ${found.length} trouvées, ${valid.length} valides, ${fresh.length} nouvelles dans le budget.`);
   console.log(JSON.stringify(sources));
 
