@@ -53,6 +53,72 @@ async function get(url, opts = {}) {
   }
 }
 
+async function getFull(url, opts = {}) {
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), opts.timeout || 20000);
+  try {
+    const res = await fetch(url, { signal: ctrl.signal, redirect: "follow", headers: { "User-Agent": UA, "Accept": "text/html,application/xhtml+xml,*/*;q=0.8", "Accept-Language": "fr-FR,fr;q=0.9" } });
+    return { status: res.status, url: res.url, text: await res.text() };
+  } finally { clearTimeout(t); }
+}
+
+const OUT_RE = /rupture de stock|en rupture|indisponible|épuisé|epuise|plus disponible|n'est plus en vente|victime de son succès|temporairement indisponible|currently unavailable|out of stock|produit non disponible|bientôt disponible|ce produit n'est plus|stock épuisé/i;
+const IN_RE = /\ben stock\b|ajouter au panier|add to (?:cart|basket)|livraison (?:gratuite|offerte|rapide|en 24|demain|dès)|expédié sous|retrait (?:gratuit|en magasin)|disponible en ligne|in stock/i;
+const BLOCK_RE = /captcha|datadome|access denied|are you a robot|robot check|unusual traffic|cf-chl|attention required|px-captcha|perimeterx/i;
+
+function ldOffers(html) {
+  const out = { prices: [], avail: [], names: [] };
+  const re = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi; let m;
+  const walk = (o) => {
+    if (!o || typeof o !== "object") return;
+    if (Array.isArray(o)) { o.forEach(walk); return; }
+    const type = [].concat(o["@type"] || []).join(" ");
+    if (/Product/i.test(type) && o.name) out.names.push(String(o.name));
+    if (/Offer/i.test(type) || o.price != null || o.lowPrice != null) {
+      for (const k of ["price", "lowPrice"]) if (o[k] != null) { const v = parseFloat(String(o[k]).replace(/\s/g, "").replace(",", ".")); if (v > 300) out.prices.push(v); }
+      if (o.availability) out.avail.push(String(o.availability));
+    }
+    for (const v of Object.values(o)) if (v && typeof v === "object") walk(v);
+  };
+  while ((m = re.exec(html))) { try { walk(JSON.parse(m[1].trim())); } catch {} }
+  const meta = html.match(/(?:product:price:amount|itemprop=["']price["'])[^>]*content=["']([\d.,\s]+)["']/i) || html.match(/content=["']([\d.,\s]+)["'][^>]*(?:product:price:amount|itemprop=["']price["'])/i);
+  if (meta) { const v = parseFloat(meta[1].replace(/\s/g, "").replace(",", ".")); if (v > 300) out.prices.push(v); }
+  const av = html.match(/itemprop=["']availability["'][^>]*(?:href|content)=["']([^"']+)["']/i);
+  if (av) out.avail.push(av[1]);
+  return out;
+}
+
+// Vérifie une offre sur la page du vendeur : bonne puce + bonne RAM, prix ≤ budget, en stock.
+// Renvoie { verdict: "ok" | "gone" | "unknown", price, reason, url }
+async function verifyOffer(url, d) {
+  if (!url) return { verdict: "unknown", reason: "pas de lien vers le vendeur" };
+  let r;
+  try { r = await getFull(url); } catch (e) { return { verdict: "unknown", reason: `page injoignable (${e.message})` }; }
+  const html = r.text || "";
+  if (r.status === 404 || r.status === 410) return { verdict: "gone", reason: "page de l'offre supprimée", url: r.url };
+  if (r.status >= 400 || (html.length < 20000 && BLOCK_RE.test(html))) return { verdict: "unknown", reason: `le site bloque la vérification (HTTP ${r.status})`, url: r.url };
+  const host = (() => { try { return new URL(r.url).hostname; } catch { return ""; } })();
+  if (/dealabs\.com$/.test(host)) return { verdict: "unknown", reason: "lien marchand non résolu", url: r.url };
+  const ld = ldOffers(html);
+  const body = stripTags(html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, " "));
+  const head = (ld.names.join(" ") + " " + stripTags((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || "") + " " + body.slice(0, 6000));
+  const chipOk = new RegExp(d.chip.replace(" ", "\\s?"), "i").test(head);
+  const ramOk = !d.ram || new RegExp(`\\b${d.ram}\\s?(?:go|gb)\\b`, "i").test(head) || d.ramInferred;
+  if (!chipOk || !ramOk) return { verdict: "unknown", reason: "la page ne correspond pas exactement au modèle", url: r.url };
+  const availStr = ld.avail.join(" ");
+  let price = ld.prices.length ? Math.min(...ld.prices) : null;
+  if (price == null) { const p = parsePrices(body.slice(0, 8000)); if (p.length) price = Math.min(...p.filter((v) => v >= 1500)); if (!isFinite(price)) price = null; }
+  if (/OutOfStock|SoldOut|Discontinued/i.test(availStr)) return { verdict: "gone", reason: "en rupture de stock", price, url: r.url };
+  const inStockLd = /InStock|LimitedAvailability|OnlineOnly|InStoreOnly/i.test(availStr);
+  const zone = body.slice(0, 12000);
+  const inStockText = IN_RE.test(zone) && !OUT_RE.test(zone);
+  if (!inStockLd && OUT_RE.test(zone) && !IN_RE.test(zone)) return { verdict: "gone", reason: "en rupture de stock", price, url: r.url };
+  if (price != null && price > BUDGET + 0.5) return { verdict: "gone", reason: `prix remonté à ${Math.round(price)} €`, price, url: r.url };
+  if (price == null) return { verdict: "unknown", reason: "prix introuvable sur la page", url: r.url };
+  if (inStockLd || inStockText) return { verdict: "ok", price, url: r.url, reason: inStockLd ? "en stock (fiche produit)" : "en stock (page vendeur)" };
+  return { verdict: "unknown", reason: "stock non affiché", price, url: r.url };
+}
+
 // ---------- Décodage / parsing de texte ----------
 function decodeEntities(s) {
   return String(s || "")
@@ -220,9 +286,11 @@ async function dealabs() {
       if (th.price) specs.price = +th.price;
       if (th.nextBestPrice && +th.nextBestPrice > specs.price) specs.oldPrice = +th.nextBestPrice;
       const link = th.shareableLink || (th.threadId ? `https://www.dealabs.com/bons-plans/${th.titleSlug || "deal"}-${th.threadId}` : url);
+      const merchantUrl = th.link || th.merchantUrl || (th.threadId ? `https://www.dealabs.com/visit/threadmain/${th.threadId}` : null);
+      dbg("dealabsKeys", { keys: Object.keys(th).join(","), link: th.link, id: th.threadId });
       items.push({
         ...specs, title, merchant: merchant || "Dealabs", condition: "neuf",
-        url: link, sourceUrl: link, source: "Dealabs",
+        url: link, sourceUrl: link, source: "Dealabs", merchantUrl,
         expired: !!(th.isExpired || th.status === "expired"),
         temperature: th.temperature != null ? Math.round(th.temperature) : null,
         refurbFlag: REFURB_RE.test(title),
@@ -295,41 +363,47 @@ async function newsFeeds() {
 async function retailers() {
   const items = [];
   const searches = [
-    { name: "LDLC", url: "https://www.ldlc.com/recherche/macbook%20pro%20m5%20pro/", split: /class="pdt-item/ },
-    { name: "LDLC", url: "https://www.ldlc.com/recherche/macbook%20pro%20m4%20pro/", split: /class="pdt-item/ },
-    { name: "Materiel.net", url: "https://www.materiel.net/recherche/macbook%20pro%20m5%20pro/", split: /class="c-products-list__item/ },
-    { name: "Boulanger", url: "https://www.boulanger.com/resultats?tr=macbook+pro+m5+pro", split: /class="product-list__item|data-product-id=/ },
-    { name: "Fnac", url: "https://www.fnac.com/SearchResult/ResultList.aspx?Search=macbook+pro+m5+pro", split: /class="Article-item|data-prid=/ },
-    { name: "Darty", url: "https://www.darty.com/nav/recherche?text=macbook+pro+m5+pro", split: /class="product_detail|data-sku=/ },
-    { name: "Amazon", url: "https://www.amazon.fr/s?k=macbook+pro+m5+pro&i=computers", split: /data-component-type="s-search-result"/ },
+    { name: "LDLC", url: "https://www.ldlc.com/recherche/macbook%20pro%20m5%20pro/", link: /href="(\/fiche\/PB\d+\.html)"/g },
+    { name: "LDLC", url: "https://www.ldlc.com/recherche/macbook%20pro%20m4%20pro/", link: /href="(\/fiche\/PB\d+\.html)"/g },
+    { name: "Materiel.net", url: "https://www.materiel.net/recherche/macbook%20pro%20m5%20pro/", link: /href="(\/produit\/\d+\.html)"/g },
+    { name: "Boulanger", url: "https://www.boulanger.com/resultats?tr=macbook+pro+m5+pro", link: /href="(\/ref\/\d+)"/g },
+    { name: "Boulanger", url: "https://www.boulanger.com/resultats?tr=macbook+pro+m4+pro", link: /href="(\/ref\/\d+)"/g },
+    { name: "Fnac", url: "https://www.fnac.com/SearchResult/ResultList.aspx?Search=macbook+pro+m5+pro", link: /href="(https:\/\/www\.fnac\.com\/[^"]*\/a\d+\/w-4)[^"]*"/g },
+    { name: "Fnac", url: "https://www.fnac.com/SearchResult/ResultList.aspx?Search=macbook+pro+m4+pro", link: /href="(https:\/\/www\.fnac\.com\/[^"]*\/a\d+\/w-4)[^"]*"/g },
+    { name: "Darty", url: "https://www.darty.com/nav/recherche?text=macbook+pro+m5+pro", link: /href="(\/nav\/achat\/[^"]+\.html)"/g },
+    { name: "Amazon", url: "https://www.amazon.fr/s?k=macbook+pro+m5+pro&i=computers", link: /href="(\/[^"]*\/dp\/[A-Z0-9]{10})/g },
   ];
   let okCount = 0;
   for (const s of searches) {
     let html;
     try { html = await get(s.url); okCount++; } catch (e) { console.log(`[${s.name}] ${e.message}`); continue; }
-    // Texte visible de la page, découpé à chaque nom de produit « MacBook Pro »
-    const text = stripTags(html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<noscript[\s\S]*?<\/noscript>/gi, " "));
-    const starts = []; const nameRe = /(?:Apple\s+)?Mac\s?Book\s+Pro\b/gi; let nm;
-    while ((nm = nameRe.exec(text))) starts.push(nm.index);
-    const links = [...html.matchAll(/<a[^>]*href="([^"]+)"[^>]*>([^<]{0,200}MacBook Pro[^<]{0,200})<\/a>/gi)].map((x) => ({ href: x[1], name: stripTags(x[2]) }));
-    const segs = [];
-    for (let i = 0; i < starts.length; i++) {
-      const seg = text.slice(starts[i], Math.min(starts[i] + 700, starts[i + 1] ?? text.length));
-      if (seg.length < 25) continue;
-      segs.push(seg);
+    // Découpe la page à chaque lien produit : chaque bloc = une fiche (nom, prix, dispo)
+    const clean = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<noscript[\s\S]*?<\/noscript>/gi, " ");
+    const marks = []; let lm; s.link.lastIndex = 0;
+    while ((lm = s.link.exec(clean))) { if (!marks.length || marks[marks.length - 1].href !== lm[1]) marks.push({ href: lm[1], at: lm.index }); }
+    const blocks = [];
+    for (let i = 0; i < marks.length; i++) {
+      let j = i + 1; while (j < marks.length && marks[j].href === marks[i].href) j++;
+      const end = j < marks.length ? marks[j].at : Math.min(clean.length, marks[i].at + 6000);
+      const prevEnd = i > 0 ? marks[i - 1].at : Math.max(0, marks[i].at - 1500);
+      blocks.push({ href: marks[i].href, text: stripTags(clean.slice(Math.max(prevEnd, marks[i].at - 1500), Math.min(end, marks[i].at + 6000))) });
+      i = j - 1;
     }
-    dbg("retailers", { name: s.name, len: html.length, segments: segs.length, samples: segs.filter((x) => /€/.test(x)).slice(0, 4).map((x) => x.slice(0, 260)) });
-    const seenSeg = new Set();
-    for (const seg of segs) {
-      if (REFURB_RE.test(seg) || /vendu (?:et expédié )?par (?!amazon|fnac|darty|boulanger|ldlc|materiel)/i.test(seg)) continue;
-      const specs = parseSpecs(seg);
+    dbg("retailers", { name: s.name, len: html.length, links: marks.length, blocks: blocks.length, samples: blocks.filter((b) => /mac\s?book pro/i.test(b.text) && /€/.test(b.text)).slice(0, 3).map((b) => b.href + " :: " + b.text.slice(0, 300)) });
+    const seenBlock = new Set();
+    for (const b of blocks) {
+      const nameAt = b.text.search(/(?:Apple\s+)?Mac\s?Book\s+Pro\b/i);
+      if (nameAt < 0) continue;
+      const t = b.text.slice(nameAt, nameAt + 900);
+      if (REFURB_RE.test(t) || /vendu (?:et expédié )?par (?!amazon|fnac|darty|boulanger|ldlc|materiel)/i.test(t)) continue;
+      const specs = parseSpecs(t);
       if (!specs || !specs.price || specs.price < 1500) continue;
-      const name = seg.split(/\s(?=\d[\d\s]*[,.]?\d*\s?€)/)[0].slice(0, 160);
-      const k = specs.chip + specs.ram + specs.storage + specs.price;
-      if (seenSeg.has(k)) continue; seenSeg.add(k);
-      const lk = links.find((l) => name.toLowerCase().includes(l.name.toLowerCase().slice(0, 40)) || l.name.toLowerCase().includes(name.toLowerCase().slice(0, 40)));
-      const link = lk ? new URL(decodeEntities(lk.href), s.url).href.split("#")[0] : s.url;
-      items.push({ ...specs, title: name, merchant: s.name, condition: "neuf", url: link, sourceUrl: s.url, source: s.name, fromRetailer: true });
+      const link = new URL(decodeEntities(b.href), s.url).href;
+      if (seenBlock.has(link)) continue; seenBlock.add(link);
+      const name = t.split(/\s(?=\d[\d\s]*[,.]?\d*\s?€)/)[0].slice(0, 160);
+      const listingInStock = IN_RE.test(t) && !OUT_RE.test(t);
+      const listingOut = OUT_RE.test(t) && !IN_RE.test(t);
+      items.push({ ...specs, title: name, merchant: s.name, condition: "neuf", url: link, sourceUrl: s.url, source: s.name, fromRetailer: true, listingInStock, expired: listingOut });
     }
   }
   if (!okCount) throw new Error("tous les revendeurs ont bloqué la requête");
@@ -368,43 +442,79 @@ async function main() {
   // Fusion avec l'historique
   const byId = new Map((prev.deals || []).map((d) => [d.id, d]));
   const seenThisRun = new Set();
-  const fresh = [];
+  const candidates = [];
   for (const d of valid) {
     const id = `${slug(d.merchant)}-${dealKey(d)}`;
     if (seenThisRun.has(id)) continue;
     seenThisRun.add(id);
     const old = byId.get(id);
-    const note = [keyboardNote(d.url || "", d.title || ""), d.ramInferred ? `RAM non précisée : ${d.ram} Go minimum sur cette puce, à confirmer.` : null, d.fromNews ? `Relayé par ${d.source}.` : null]
-      .filter(Boolean).join(" ") || null;
     const rec = {
+      ...(old || {}),
       id, chip: d.chip, gen: d.gen, tier: d.tier, cpuGpu: d.cpuGpu || (old && old.cpuGpu) || null,
-      size: d.size || (old && old.size) || null, ram: d.ram, storage: d.storage || (old && old.storage) || null,
+      size: d.size || (old && old.size) || null, ram: d.ram, ramInferred: !!d.ramInferred, storage: d.storage || (old && old.storage) || null,
       price: d.price, oldPrice: d.oldPrice || (old && old.oldPrice) || null,
       merchant: d.merchant, condition: d.condition,
       status: d.expired ? "expired" : (d.confirmed ? "active" : "to_verify"),
-      url: d.url, sourceUrl: d.sourceUrl, source: d.source, title: d.title || null,
-      temperature: d.temperature ?? null, note,
+      url: (old && old.verifiedUrl) || d.url, sourceUrl: d.sourceUrl, source: d.source, title: d.title || null,
+      merchantUrl: d.merchantUrl || (d.fromRetailer ? d.url : null) || (old && old.merchantUrl) || null,
+      listingInStock: !!d.listingInStock, fromRetailer: !!d.fromRetailer,
+      temperature: d.temperature ?? null,
       foundAt: (old && old.foundAt) || NOW.toISOString(), checkedAt: NOW.toISOString(), lastSeen: NOW.toISOString(),
     };
+    if (rec.condition === "reco-apple" && rec.status === "active") { rec.verifiedAt = NOW.toISOString(); rec.verifyNote = "En vente sur l'Apple Store (reconditionné) au moment du scan."; }
     byId.set(id, rec);
-    const inBudget = rec.status !== "expired" && rec.price <= BUDGET && rec.ram >= MIN_RAM;
-    const k = dealKey(rec);
-    if (inBudget && !seen.keys[k]) { fresh.push(rec); }
-    if (inBudget) seen.keys[k] = NOW.toISOString();
+    candidates.push(rec);
   }
 
-  // Expiration : reconditionné Apple absent de la page = vendu ; autres sources non revues depuis 48 h
+  // Reconditionné Apple absent de la page = vendu ; autres sources non revues depuis 48 h = expirées
   const appleOk = sources["Apple Reconditionné"] && sources["Apple Reconditionné"].ok;
   for (const d of byId.values()) {
     if (seenThisRun.has(d.id) || d.status === "expired") continue;
     const age = NOW - new Date(d.lastSeen || d.checkedAt || 0);
-    if ((d.condition === "reco-apple" && appleOk) || age > 48 * 3600e3) { d.status = "expired"; d.checkedAt = NOW.toISOString(); }
+    if (d.condition === "reco-apple" && appleOk) { d.status = "expired"; d.checkedAt = NOW.toISOString(); d.verifyNote = "N'est plus en vente sur l'Apple Store."; }
+    else if (age > 48 * 3600e3) { d.status = "expired"; d.checkedAt = NOW.toISOString(); }
+    else if (d.status === "active" && d.price <= BUDGET) { d.listingInStock = false; candidates.push(d); }   // re-vérifier les offres validées
   }
-  // On garde 14 jours d'historique
-  const deals = [...byId.values()].filter((d) => NOW - new Date(d.lastSeen || d.checkedAt || 0) < 14 * 86400e3);
-  for (const k of Object.keys(seen.keys)) if (NOW - new Date(seen.keys[k]) > 30 * 86400e3) delete seen.keys[k];
 
-  const inBudgetCount = deals.filter((d) => d.status !== "expired" && d.price <= BUDGET).length;
+  // Vérification en direct sur la page du vendeur, pour toute offre (hors reconditionné Apple) au prix du budget
+  for (const rec of candidates) {
+    if (rec.status === "expired" || rec.condition === "reco-apple" || rec.price > BUDGET) continue;
+    const res = await verifyOffer(rec.merchantUrl, rec);
+    dbg("verify", { id: rec.id, url: rec.merchantUrl, ...res });
+    rec.checkedAt = NOW.toISOString();
+    if (res.verdict === "ok") {
+      rec.status = "active"; rec.verifiedAt = NOW.toISOString(); rec.verifiedUrl = res.url; rec.url = res.url;
+      if (res.price) rec.price = res.price;
+      rec.verifyNote = `Vérifié ${res.reason} à ${Math.round(rec.price).toLocaleString("fr-FR")} €.`;
+    } else if (res.verdict === "gone") {
+      rec.status = "expired"; rec.verifyNote = `Plus disponible : ${res.reason}.`;
+    } else if (rec.listingInStock) {
+      // Page produit bloquée, mais la page de résultats du vendeur affiche le prix et la dispo en direct
+      rec.status = "active"; rec.verifiedAt = NOW.toISOString(); rec.verifyNote = `Vérifié en stock sur le site ${rec.merchant} (page de résultats).`;
+    } else {
+      rec.status = "to_verify"; rec.verifyNote = `Non vérifiable automatiquement (${res.reason}) : pas de notification.`;
+    }
+  }
+  for (const rec of byId.values()) {
+    rec.note = [keyboardNote(rec.url || "", rec.title || ""), rec.ramInferred ? `RAM non précisée : ${rec.ram} Go minimum sur cette puce.` : null, rec.verifyNote || null].filter(Boolean).join(" ") || null;
+  }
+
+  // Notifications : uniquement les offres vérifiées en stock, au budget, jamais notifiées
+  const fresh = [];
+  for (const rec of byId.values()) {
+    if (rec.status !== "active" || rec.price > BUDGET || rec.ram < MIN_RAM || !rec.verifiedAt) continue;
+    if (NOW - new Date(rec.verifiedAt) > 5 * 60e3) continue;
+    const k = `${rec.id}`;
+    const prevNotif = seen.keys[k];
+    const prevPrice = seen.prices ? seen.prices[k] : null;
+    if (!prevNotif || (prevPrice && rec.price <= prevPrice - 50)) fresh.push(rec);
+    seen.keys[k] = NOW.toISOString(); seen.prices = seen.prices || {}; seen.prices[k] = Math.min(rec.price, prevPrice || Infinity);
+  }
+
+  const deals = [...byId.values()].filter((d) => NOW - new Date(d.lastSeen || d.checkedAt || 0) < 14 * 86400e3);
+  for (const k of Object.keys(seen.keys)) if (NOW - new Date(seen.keys[k]) > 30 * 86400e3) { delete seen.keys[k]; if (seen.prices) delete seen.prices[k]; }
+
+  const inBudgetCount = deals.filter((d) => d.status === "active" && d.price <= BUDGET).length;
   writeJson(DEALS_FILE, {
     lastScan: NOW.toISOString(),
     summary: `${inBudgetCount} offre${inBudgetCount > 1 ? "s" : ""} dans le budget`,
@@ -418,7 +528,7 @@ async function main() {
   // Notifications
   const messages = fresh.slice(0, 5).map((d) => ({
     title: `🔥 ${d.chip} ${d.size ? d.size + "″ " : ""}à ${Math.round(d.price).toLocaleString("fr-FR")} €`,
-    body: `MacBook Pro ${d.ram} Go${d.storage ? " / " + d.storage : ""} chez ${d.merchant}${d.condition === "reco-apple" ? " (reconditionné Apple)" : ""}${d.oldPrice ? ` au lieu de ${Math.round(d.oldPrice).toLocaleString("fr-FR")} €` : ""}`,
+    body: `MacBook Pro ${d.ram} Go${d.storage ? " / " + d.storage : ""} chez ${d.merchant}${d.condition === "reco-apple" ? " (reconditionné Apple)" : ""}${d.oldPrice ? ` au lieu de ${Math.round(d.oldPrice).toLocaleString("fr-FR")} €` : ""}. En stock, vérifié à l'instant.`,
     url: d.url || APP_URL, tag: d.id,
   }));
   if (fresh.length > 5) messages.push({ title: `+${fresh.length - 5} autres offres`, body: "Ouvre Mac Radar pour tout voir.", url: APP_URL, tag: "more" });

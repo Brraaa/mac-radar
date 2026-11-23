@@ -193,7 +193,7 @@ footer { font-size: 12px; color: var(--muted); text-align: center; }
     <h2 id="h-notif">Notifications</h2>
     <p id="notifText">Vérification…</p>
     <div class="actions" id="notifActions"></div>
-    <p>Le robot scanne toutes les 20 minutes, jour et nuit. Tu reçois une notif Mac Radar uniquement quand une <b>nouvelle</b> offre rentre dans tes critères.</p>
+    <p>Le robot scanne toutes les 20 minutes, jour et nuit. Tu reçois une notif uniquement quand une <b>nouvelle</b> offre rentre dans tes critères <b>et</b> que le robot vient de la vérifier en stock, au bon prix, sur le site du vendeur.</p>
   </section>
 
   <section class="panel" aria-labelledby="h-install" id="installPanel">
@@ -263,7 +263,7 @@ footer { font-size: 12px; color: var(--muted); text-align: center; }
     if (d.status === "expired") return "expired";
     var p = num(d.price), r = num(d.ram);
     var okCond = d.condition === "neuf" || d.condition === "reco-apple";
-    if (p != null && p <= BUDGET && r != null && r >= MIN_RAM && okCond) return "budget";
+    if (p != null && p <= BUDGET && r != null && r >= MIN_RAM && okCond && d.status === "active") return "budget";
     return "watch";
   }
   function matchesFilters(d) {
@@ -285,7 +285,7 @@ footer { font-size: 12px; color: var(--muted); text-align: center; }
     if (d.color) specs.push(esc(d.color));
     if (d.temperature != null && d.source === "Dealabs") specs.push(num(d.temperature) + "° Dealabs");
     var cond = d.condition === "reco-apple" ? '<span class="pill reco">Reconditionné Apple</span>' : '<span class="pill neuf">Neuf</span>';
-    var st = cls === "expired" ? '<span class="pill gone">Expirée</span>' : (d.status === "to_verify" ? '<span class="pill verify">Stock à vérifier</span>' : "");
+    var st = cls === "expired" ? '<span class="pill gone">Expirée</span>' : (d.status === "to_verify" ? '<span class="pill verify">Non vérifiée</span>' : (d.verifiedAt ? '<span class="pill neuf">✓ En stock · vérifié ' + esc(ago(d.verifiedAt)) + '</span>' : ""));
     var why = cls === "watch" && price != null && price > BUDGET ? "Au-dessus du budget de " + eur.format(price - BUDGET) + "." : "";
     return '<article class="deal ' + cls + '">' +
       '<div class="row"><h3 class="model">' + title + '</h3>' +
@@ -324,7 +324,7 @@ footer { font-size: 12px; color: var(--muted); text-align: center; }
     else if (state.loaded === null) html = '<div class="empty">Chargement des offres…</div>';
     else if (!items.length) {
       var msg = state.view === "budget" ? "<b>Aucune offre dans ton budget pour l'instant.</b> Le robot continue : tu recevras une notif dès qu'un Mac passe sous 2 600 €." :
-        state.view === "watch" ? "<b>Rien à surveiller.</b> Ici apparaissent les bonnes affaires juste au-dessus de ton budget (jusqu'à 3 000 €)." : "<b>Aucune offre expirée.</b>";
+        state.view === "watch" ? "<b>Rien à surveiller.</b> Ici apparaissent les offres juste au-dessus du budget (jusqu'à 3 000 €) et celles que le robot n'a pas pu vérifier en stock." : "<b>Aucune offre expirée.</b>";
       if (state.gen !== "all" || state.only16) msg += " Essaie d'enlever le filtre.";
       html = '<div class="empty">' + msg + '</div>';
     } else html = items.map(function (d) { return card(d, state.view); }).join("");
