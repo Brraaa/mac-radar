@@ -1,5 +1,5 @@
 {
-  "lastScan": "2026-11-23T15:15:40.794Z",
+  "lastScan": "2026-11-23T15:17:49.923Z",
   "summary": "1 offre dans le budget",
   "budget": 2600,
   "minRam": 24,
@@ -43,13 +43,13 @@
       "temperature": null,
       "note": "En vente sur l'Apple Store (reconditionné) au moment du scan.",
       "foundAt": "2026-11-23T14:55:13.773Z",
-      "checkedAt": "2026-11-23T15:15:40.794Z",
-      "lastSeen": "2026-11-23T15:15:40.794Z",
+      "checkedAt": "2026-11-23T15:17:49.923Z",
+      "lastSeen": "2026-11-23T15:17:49.923Z",
       "ramInferred": false,
       "merchantUrl": null,
       "listingInStock": false,
       "fromRetailer": false,
-      "verifiedAt": "2026-11-23T15:15:40.794Z",
+      "verifiedAt": "2026-11-23T15:17:49.923Z",
       "verifyNote": "En vente sur l'Apple Store (reconditionné) au moment du scan."
     },
     {
@@ -73,8 +73,8 @@
       "temperature": null,
       "note": null,
       "foundAt": "2026-11-23T14:55:13.773Z",
-      "checkedAt": "2026-11-23T15:15:40.794Z",
-      "lastSeen": "2026-11-23T15:15:40.794Z",
+      "checkedAt": "2026-11-23T15:17:49.923Z",
+      "lastSeen": "2026-11-23T15:17:49.923Z",
       "ramInferred": false,
       "merchantUrl": "https://www.ldlc.com/fiche/PB00729170.html",
       "listingInStock": true,
@@ -101,13 +101,13 @@
       "temperature": 348,
       "note": "Vérifié en stock (fiche produit) à 2 599 €.",
       "foundAt": "2026-11-23T14:57:23.775Z",
-      "checkedAt": "2026-11-23T15:15:40.794Z",
-      "lastSeen": "2026-11-23T15:15:40.794Z",
+      "checkedAt": "2026-11-23T15:17:49.923Z",
+      "lastSeen": "2026-11-23T15:17:49.923Z",
       "ramInferred": false,
       "merchantUrl": "https://www.dealabs.com/visit/threadmain/3463391",
       "listingInStock": false,
       "fromRetailer": false,
-      "verifiedAt": "2026-11-23T15:15:40.794Z",
+      "verifiedAt": "2026-11-23T15:17:49.923Z",
       "verifiedUrl": "https://www.boulanger.com/ref/1235629",
       "verifyNote": "Vérifié en stock (fiche produit) à 2 599 €."
     },
@@ -226,10 +226,12 @@
       "source": "Fnac",
       "title": "Apple MacBook Pro 14\" 1 To SSD 24 Go RAM Puce M5 Pro CPU 15 cœurs GPU 16 cœurs Noir sidéral MacBook -&nbsp Apple 5 14 avis 5 Labo Fnac Black Friday Jusqu'à",
       "temperature": null,
-      "note": null,
+      "note": "Non vérifiable automatiquement (pas de lien vers le vendeur) : pas de notification.",
       "foundAt": "2026-11-23T14:59:29.130Z",
-      "checkedAt": "2026-11-23T14:59:29.130Z",
-      "lastSeen": "2026-11-23T14:59:29.130Z"
+      "checkedAt": "2026-11-23T15:17:49.923Z",
+      "lastSeen": "2026-11-23T14:59:29.130Z",
+      "listingInStock": false,
+      "verifyNote": "Non vérifiable automatiquement (pas de lien vers le vendeur) : pas de notification."
     },
     {
       "id": "fnac-m5pro-14-24-1to-2699",
@@ -252,8 +254,8 @@
       "temperature": null,
       "note": null,
       "foundAt": "2026-11-23T14:59:29.130Z",
-      "checkedAt": "2026-11-23T15:15:40.794Z",
-      "lastSeen": "2026-11-23T15:15:40.794Z",
+      "checkedAt": "2026-11-23T15:17:49.923Z",
+      "lastSeen": "2026-11-23T15:17:49.923Z",
       "ramInferred": false,
       "merchantUrl": "https://www.fnac.com/Apple-MacBook-Pro-14-1-To-SSD-24-Go-RAM-Puce-M5-Pro-CPU-15-coeurs-GPU-16-coeurs-Noir-sideral/a21322761/w-4",
       "listingInStock": true,
@@ -307,8 +309,8 @@
       "fromRetailer": true,
       "temperature": null,
       "foundAt": "2026-11-23T15:15:40.794Z",
-      "checkedAt": "2026-11-23T15:15:40.794Z",
-      "lastSeen": "2026-11-23T15:15:40.794Z",
+      "checkedAt": "2026-11-23T15:17:49.923Z",
+      "lastSeen": "2026-11-23T15:17:49.923Z",
       "note": null
     },
     {
@@ -335,8 +337,8 @@
       "fromRetailer": true,
       "temperature": null,
       "foundAt": "2026-11-23T15:15:40.794Z",
-      "checkedAt": "2026-11-23T15:15:40.794Z",
-      "lastSeen": "2026-11-23T15:15:40.794Z",
+      "checkedAt": "2026-11-23T15:17:49.923Z",
+      "lastSeen": "2026-11-23T15:17:49.923Z",
       "note": null
     }
   ]

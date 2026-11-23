@@ -174,7 +174,7 @@
   "dealabs": [
     {
       "q": "macbook pro m5 pro",
-      "len": 280663,
+      "len": 280691,
       "vue": 340,
       "threads": 30,
       "titles": [
@@ -241,7 +241,7 @@
     },
     {
       "q": "macbook pro m3 max",
-      "len": 86836,
+      "len": 86706,
       "vue": 60,
       "threads": 5,
       "titles": [
@@ -284,7 +284,7 @@
         "Les prix des MacBook Pro M5 et M6 ont été annoncés",
         "MacBook Pro M5, M6 et OLED tactile, comment choisir son Mac portable",
         "Test des MacBook Pro PROLED XDR : le changement, c’est maintenant ?",
-        "Apple MacBook Pro (M5 Pro)"
+        "Promo Apple : Amazon casse le prix du MacBook Pro 16 M5 Pro, sous les 3000€"
       ]
     },
     {
@@ -309,20 +309,20 @@
       "len": 13810,
       "items": 9,
       "titles": [
-        "Grosse promo sur le MacBook Air M5 1To en 15 pouces : -330€ pour le Black Friday ! - Mac4Ever",
         "Le Black Friday atteint même les MacBook et les Mac mini : voici lees meilleures remises sur les ordinateurs d’Apple - Frandroid",
         "Le MacBook Air M6 pourrait être lancé dès mars 2027 - Consomac",
-        "Black Friday : voici le TOP 7 des meilleurs PC portables en promo - Frandroid"
+        "Black Friday : voici le TOP 7 des meilleurs PC portables en promo - Frandroid",
+        "Grosse promo sur le MacBook Air M5 1To en 15 pouces : -330€ pour le Black Friday ! - Mac4Ever"
       ]
     },
     {
       "feed": "https://www.bing.com/news/search?q=%22MacBook%20Pro%22%20%22M5%20Max%22%20promo&format=rss",
-      "len": 7611,
-      "items": 8,
+      "len": 6867,
+      "items": 7,
       "titles": [
         "MacBook Pro M5 Pro et M5 Max",
-        "Les meilleures promos Black Friday de la semaine : TV, HONOR 600 Pro, MacBook Pro M5 Max, HONOR MagicPad4...",
         "Watch Apple’s promo video for the new MacBook Pro with PROLED XDR Display",
+        "Les meilleures promos Black Friday de la semaine : TV, HONOR 600 Pro, MacBook Pro M5 Max, HONOR MagicPad4...",
         "Le MacBook Pro M6 est lancé, mais le 16\" M5 Max est bradé à -22% chez Amazon 🔥"
       ]
     },
@@ -356,42 +356,42 @@
     },
     {
       "feed": "https://www.bing.com/news/search?q=%22MacBook%20Pro%22%20bon%20plan&format=rss&setlang=fr-",
-      "len": 8566,
-      "items": 8,
+      "len": 6744,
+      "items": 6,
       "titles": [
-        "Et voilà : ce MacBook Pro s'écoule par conteneurs depuis qu'il a atteint ce prix ultime",
         "Bon plan Black Friday : le MacBook Air M5 13 pouces (16 Go, 512 Go) à 1199 euros sur Amazon",
+        "Et voilà : ce MacBook Pro s'écoule par conteneurs depuis qu'il a atteint ce prix ultime",
         "Bon plan – L'ordinateur Portable Apple MacBook Pro 14 (M5 Pro) 24 Go / 1 To \"5 étoiles\" à 2 331,94 €",
         "Le MacBook Pro M5 est à prix bas pour une durée très limitée sur le site de la FNAC"
       ]
     },
     {
       "feed": "https://news.google.com/rss/search?q=%22MacBook%20Pro%22%20Black%20Friday%20when%3A2d&hl=f",
-      "len": 39687,
-      "items": 26,
+      "len": 41208,
+      "items": 27,
       "titles": [
         "Black Friday : ce MacBook Pro passe de 1449 à 598 € et bouscule le marché des PC portables ce lundi - Ouest-France",
         "À peine sorti, le MacBook Pro 14 M6 d’Apple perd déjà 200 € pour le Black Friday - Frandroid",
-        "Black Friday : jusqu’à 20 % de réduction sur le Mac mini M6 - MacGeneration",
-        "À l'occasion du Black Friday 2026, ce PC Apple noté 5/5 s'allège de 200,00 € - Les Numériques"
+        "À l'occasion du Black Friday 2026, ce PC Apple noté 5/5 s'allège de 200,00 € - Les Numériques",
+        "Black Friday : jusqu’à 20 % de réduction sur le Mac mini M6 - MacGeneration"
       ]
     },
     {
       "feed": "https://www.bing.com/news/search?q=%22MacBook%20Pro%22%20Black%20Friday&format=rss&setlang",
-      "len": 9317,
+      "len": 8964,
       "items": 9,
       "titles": [
         "Black Friday Apple : MacBook Air ou MacBook Pro, quel modèle reconditionné acheter ?",
         "Pendant le Black Friday, quel MacBook acheter en promo ?",
-        "Comment le MacBook Pro peut-il avoir son prix qui baisse de plus de 874 euros en novembre 2026 ?",
-        "Bon plan Black Friday : le MacBook Air M5 13 pouces (16 Go, 512 Go) à 1199 euros sur Amazon"
+        "Bon plan Black Friday : le MacBook Air M5 13 pouces (16 Go, 512 Go) à 1199 euros sur Amazon",
+        "Black Friday MacBook Pro 13″ : 200 € de réduction sur les ordinateurs Apple à la Fnac"
       ]
     }
   ],
   "retailers": [
     {
       "name": "LDLC",
-      "len": 217441,
+      "len": 218012,
       "links": 30,
       "blocks": 30,
       "samples": [
@@ -402,7 +402,7 @@
     },
     {
       "name": "LDLC",
-      "len": 212261,
+      "len": 212832,
       "links": 30,
       "blocks": 30,
       "samples": [
@@ -420,21 +420,21 @@
     },
     {
       "name": "Boulanger",
-      "len": 743023,
+      "len": 743022,
       "links": 20,
       "blocks": 20,
       "samples": []
     },
     {
       "name": "Boulanger",
-      "len": 709418,
+      "len": 709416,
       "links": 2,
       "blocks": 2,
       "samples": []
     },
     {
       "name": "Fnac",
-      "len": 423317,
+      "len": 423119,
       "links": 20,
       "blocks": 20,
       "samples": [
@@ -445,24 +445,13 @@
     },
     {
       "name": "Fnac",
-      "len": 466611,
+      "len": 466437,
       "links": 19,
       "blocks": 19,
       "samples": [
         "https://www.fnac.com/Apple-MacBook-Pro-16-512-Go-SSD-24-Go-RAM-Puce-M4-Pro-CPU-14-Coeurs-GPU-20-Coeurs-Noir-sideral/a20616298/w-4 :: 8.svg#$\" /> Apple MacBook Pro 16\" 512 Go SSD 24 Go RAM Puce M4 Pro CPU 14 Cœurs GPU 20 Cœurs Noir sidéral MacBook - Apple 4,5 24 avis 5 Labo Fnac Revendez votre Mac pour 196 €* Carte Fnac+ à 7€99 Voir le produit Modèle du processeur Apple M4 PRO 14 cœurs Capacité de stockage 512 Go Taille de l'écran",
         "https://www.fnac.com/Apple-MacBook-Pro-14-512-Go-SSD-24-Go-RAM-Puce-M4-Pro-CPU-12-Coeurs-GPU-16-Coeurs-Noir-sideral/a20616255/w-4 :: 8.svg#$\" /> Apple MacBook Pro 14\" 512 Go SSD 24 Go RAM Puce M4 Pro CPU 12 Cœurs GPU 16 Cœurs Noir sidéral MacBook - Apple 5 33 avis 5 Labo Fnac Revendez votre Mac pour 196 €* Carte Fnac+ à 7€99 Voir le produit Modèle du processeur Apple M4 PRO 12 cœurs Capacité de stockage 512 Go Taille de l'écran (",
         "https://www.fnac.com/Apple-MacBook-Pro-14-512-Go-SSD-16-Go-RAM-Puce-M4-CPU-10-Coeurs-GPU-10-Coeurs-Noir-sideral/a19748308/w-4 :: 8.svg#$\" /> Apple MacBook Pro 14\" 512 Go SSD 16 Go RAM Puce M4 CPU 10 Cœurs GPU 10 Cœurs Noir sidéral MacBook - Apple 5 61 avis LIVRAISON OFFERTE Voir le produit Modèle du processeur Apple M4 10 cœurs Capacité de stockage 512 Go Taille de l'écran (pouces) 14 \" En stock vendeur partenaire Vendu et li"
-      ]
-    },
-    {
-      "name": "Amazon",
-      "len": 1125296,
-      "links": 48,
-      "blocks": 48,
-      "samples": [
-        "/Brydge-daccueil-dordinateur-portable-compatible/dp/B0H89ZSN98 :: s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_8\" data-csa-c-type=\"item\" data-csa-c-content-id=\"search-results_8\" data-csa-c-item-id=\"amzn1.asin.1.B0H89ZSN98\" data-csa-c-asin-instance-id=\"0d3a386d-cbd3-40d2-bd48-a21ceff0bcab\" data-csa-c-cs-type=\"L",
-        "/Brydge-daccueil-dordinateur-chargement-compatible/dp/B0H89V66Y1 :: dget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_10\" data-csa-c-type=\"item\" data-csa-c-content-id=\"search-results_10\" data-csa-c-item-id=\"amzn1.asin.1.B0H89V66Y1\" data-csa-c-asin-instance-id=\"9d258b63-58da-4919-b398-1936d85b4bfe\" data-csa-c-cs-type=\"Loo",
-        "/Brydge-daccueil-moniteur-verticale-Thunderbolt/dp/B0H25QPYXX :: dget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_11\" data-csa-c-type=\"item\" data-csa-c-content-id=\"search-results_11\" data-csa-c-item-id=\"amzn1.asin.1.B0H25QPYXX\" data-csa-c-asin-instance-id=\"6d32d3c3-46eb-49fe-a002-cc5bd44d9fcb\" data-csa-c-cs-type=\"Loo"
       ]
     }
   ],
@@ -473,6 +462,11 @@
       "verdict": "ok",
       "price": 2599,
       "reason": "en stock (fiche produit)"
+    },
+    {
+      "id": "fnac-m5pro-14-24-1to-2564",
+      "verdict": "unknown",
+      "reason": "pas de lien vers le vendeur"
     }
   ]
 }
