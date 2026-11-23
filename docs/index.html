@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Mac Radar">
+<meta name="theme-color" content="#0e1014">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="icon-192.png">
+<title>Mac Radar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: one narrow column built for an iPhone held in one hand; summary strip, view switch, deal cards, then reference panels. */
+:root {
+  --bg: #eef0f3;
+  --surface: #ffffff;
+  --ink: #12151a;
+  --muted: #5b6372;
+  --line: #dde1e8;
+  --accent: #1f4dff;
+  --accent-ink: #ffffff;
+  --good: #11804a;
+  --good-bg: #e3f5eb;
+  --warn: #a5630a;
+  --warn-bg: #fbf0dc;
+  --bad: #a8222b;
+  --bad-bg: #f9e3e4;
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+  --font-num: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --radius: 14px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1014; --surface: #171a20; --ink: #eef0f4; --muted: #99a1ae; --line: #2a2f38;
+    --accent: #7891ff; --accent-ink: #0b0d12;
+    --good: #45d08b; --good-bg: #133222; --warn: #f2ab45; --warn-bg: #3a2a10; --bad: #ff7a80; --bad-bg: #3a1619;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1014; --surface: #171a20; --ink: #eef0f4; --muted: #99a1ae; --line: #2a2f38;
+  --accent: #7891ff; --accent-ink: #0b0d12;
+  --good: #45d08b; --good-bg: #133222; --warn: #f2ab45; --warn-bg: #3a2a10; --bad: #ff7a80; --bad-bg: #3a1619;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 15px; line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 560px; margin: 0 auto; padding: 20px 16px 48px; display: grid; gap: 18px; }
+header { display: grid; gap: 6px; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.radar { width: 30px; height: 30px; flex: none; }
+h1 { font-family: var(--font-display); font-weight: 800; font-size: 28px; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+.criteria { color: var(--muted); font-size: 14px; margin: 0; }
+.criteria b { color: var(--ink); font-weight: 600; }
+
+.status { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 13px; color: var(--muted); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--good); display: inline-block; margin-right: 6px; }
+.dot.stale { background: var(--warn); }
+.dot.off { background: var(--muted); }
+
+.summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; min-width: 0; }
+.tile .k { font-size: 12px; color: var(--muted); }
+.tile .v { font-family: var(--font-num); font-weight: 600; font-size: 19px; font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.tabs { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 4px; gap: 4px; }
+.tabs button {
+  font: 600 14px var(--font-body); color: var(--muted); background: transparent; border: 0; border-radius: 9px; padding: 9px 6px; cursor: pointer;
+}
+.tabs button[aria-selected="true"] { background: var(--accent); color: var(--accent-ink); }
+.tabs .n { font-family: var(--font-num); font-weight: 500; opacity: .8; margin-left: 4px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chips button {
+  font: 500 13px var(--font-body); color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+  border-radius: 999px; padding: 6px 12px; cursor: pointer;
+}
+.chips button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.list { display: grid; gap: 12px; }
+.deal {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 14px 14px 14px 18px; position: relative; display: grid; gap: 10px; overflow: hidden;
+}
+.deal::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: var(--good); }
+.deal.watch::before { background: var(--warn); }
+.deal.expired::before { background: var(--muted); }
+.deal.expired { opacity: .72; }
+.row { display: flex; gap: 10px; align-items: flex-start; justify-content: space-between; }
+.model { font-family: var(--font-display); font-weight: 700; font-size: 17px; line-height: 1.2; margin: 0; text-wrap: balance; min-width: 0; }
+.priceBox { text-align: right; flex: none; }
+.price { font-family: var(--font-num); font-weight: 600; font-size: 22px; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.old { font-family: var(--font-num); font-size: 13px; color: var(--muted); text-decoration: line-through; }
+.pct { font-family: var(--font-num); font-size: 13px; color: var(--good); font-weight: 600; margin-left: 4px; text-decoration: none; display: inline-block; }
+.specs { display: flex; flex-wrap: wrap; gap: 6px; }
+.spec { font-size: 12.5px; padding: 3px 8px; border-radius: 6px; background: var(--bg); border: 1px solid var(--line); white-space: nowrap; }
+.pill { font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+.pill.new { background: var(--accent); color: var(--accent-ink); }
+.pill.neuf { background: var(--good-bg); color: var(--good); }
+.pill.reco { background: var(--warn-bg); color: var(--warn); }
+.pill.verify { background: var(--warn-bg); color: var(--warn); }
+.pill.gone { background: var(--bad-bg); color: var(--bad); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: 13px; color: var(--muted); align-items: center; }
+.meta strong { color: var(--ink); font-weight: 600; }
+.note { font-size: 13px; color: var(--warn); margin: 0; }
+.actions { display: flex; gap: 8px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; flex: 1;
+  font: 600 14px var(--font-body); text-decoration: none; border-radius: 10px; padding: 10px 12px; cursor: pointer;
+  background: var(--accent); color: var(--accent-ink); border: 1px solid var(--accent);
+}
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); flex: none; }
+
+.empty { background: var(--surface); border: 1px dashed var(--line); border-radius: var(--radius); padding: 18px; color: var(--muted); font-size: 14px; }
+.empty b { color: var(--ink); }
+
+section.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; display: grid; gap: 10px; }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: 18px; margin: 0; text-wrap: balance; }
+.panel p { margin: 0; color: var(--muted); font-size: 14px; max-width: 65ch; }
+.panel p b { color: var(--ink); }
+ol.steps { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 14px; }
+.kw { display: flex; flex-wrap: wrap; gap: 6px; }
+.kw button { font: 500 13px var(--font-num); background: var(--bg); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; cursor: pointer; }
+.sources { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; font-size: 13.5px; margin: 0; padding: 0; list-style: none; }
+.sources li { min-width: 0; }
+.sources a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+.sources small { color: var(--muted); display: block; font-size: 12px; }
+.toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 14px; border-radius: 999px; font-size: 13px; opacity: 0; pointer-events: none; transition: opacity .2s; }
+.toast.show { opacity: 1; }
+footer { font-size: 12px; color: var(--muted); text-align: center; }
+@media (max-width: 380px) {
+  .summary { grid-template-columns: 1fr 1fr; }
+  .summary .tile:last-child { grid-column: span 2; }
+  .sources { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .toast { transition: none; } .sweep { animation: none !important; } }
+.sweep { transform-origin: 15px 15px; animation: spin 4s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <svg class="radar" viewBox="0 0 30 30" aria-hidden="true">
+        <circle cx="15" cy="15" r="13.5" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="1.5"/>
+        <circle cx="15" cy="15" r="8" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="1.5"/>
+        <g class="sweep"><path d="M15 15 L15 1.5 A13.5 13.5 0 0 1 26.7 8.2 Z" fill="var(--accent)" fill-opacity=".55"/></g>
+        <circle cx="21" cy="10" r="2.2" fill="var(--good)"/>
+      </svg>
+      <h1>Mac Radar</h1>
+    </div>
+    <p class="criteria">MacBook Pro puce <b>M3, M4 ou M5 Pro/Max</b> · <b>24 Go</b> de RAM minimum · <b>2 600 €</b> max · neuf ou reconditionné Apple</p>
+    <div class="status" id="status"><span><span class="dot off"></span>Connexion à la base…</span></div>
+  </header>
+
+  <div class="summary" aria-live="polite">
+    <div class="tile"><div class="k">Dans le budget</div><div class="v" id="sCount">–</div></div>
+    <div class="tile"><div class="k">Meilleur prix</div><div class="v" id="sBest">–</div></div>
+    <div class="tile"><div class="k">Dernier scan</div><div class="v" id="sScan">–</div></div>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="Type d'offres">
+    <button role="tab" id="tab-budget" aria-selected="true" data-view="budget">Budget<span class="n" id="nBudget"></span></button>
+    <button role="tab" id="tab-watch" aria-selected="false" data-view="watch">À surveiller<span class="n" id="nWatch"></span></button>
+    <button role="tab" id="tab-expired" aria-selected="false" data-view="expired">Expirées<span class="n" id="nExpired"></span></button>
+  </div>
+  <div class="chips" role="group" aria-label="Génération de puce">
+    <button id="g-all" data-gen="all" aria-pressed="true">Toutes</button>
+    <button id="g-M5" data-gen="M5" aria-pressed="false">M5</button>
+    <button id="g-M4" data-gen="M4" aria-pressed="false">M4</button>
+    <button id="g-M3" data-gen="M3" aria-pressed="false">M3</button>
+    <button id="g-16" data-size="16" aria-pressed="false">16″ seul.</button>
+  </div>
+
+  <div class="list" id="list">
+    <div class="empty">Chargement des offres…</div>
+  </div>
+
+  <section class="panel" aria-labelledby="h-notif" id="notifPanel">
+    <h2 id="h-notif">Notifications</h2>
+    <p id="notifText">Vérification…</p>
+    <div class="actions" id="notifActions"></div>
+    <p>Le robot scanne toutes les 20 minutes, jour et nuit. Tu reçois une notif Mac Radar uniquement quand une <b>nouvelle</b> offre rentre dans tes critères.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="h-install" id="installPanel">
+    <h2 id="h-install">Installer Mac Radar sur l'iPhone</h2>
+    <ol class="steps">
+      <li>Ouvre <b>brraaa.github.io/mac-radar</b> dans <b>Safari</b>.</li>
+      <li>Touche le bouton Partager (le carré avec la flèche).</li>
+      <li>Choisis « Sur l'écran d'accueil », puis « Ajouter ».</li>
+      <li>Ouvre Mac Radar <b>depuis la nouvelle icône</b> et active les notifications.</li>
+    </ol>
+    <p>Sur iPhone, les notifications ne marchent que pour une appli ajoutée à l'écran d'accueil (iOS 16.4 ou plus récent).</p>
+  </section>
+
+  <section class="panel" aria-labelledby="h-src">
+    <h2 id="h-src">Sources du dernier scan</h2>
+    <ul class="sources" id="sources"></ul>
+    <p>Instagram et TikTok ne sont pas lisibles par un robot sans compte connecté, et X (Twitter) demande un accès payant pour les développeurs. Ces offres sont rattrapées via Dealabs et la presse, qui les relaient vite.</p>
+    <p>Exclu d'office : tout reconditionné qui ne vient pas d'Apple (Back Market, Amazon Renewed, « Reconditionné » des enseignes…), l'occasion, et les MacBook Pro M5 ou M6 de base (puce sans « Pro » ni « Max »).</p>
+  </section>
+
+  <section class="panel" aria-labelledby="h-more">
+    <h2 id="h-more">Encore plus rapide</h2>
+    <p>Pour les ventes flash qui partent en quelques minutes, ajoute aussi une alerte dans l'appli Dealabs (« Créer une alerte ») avec ces mots-clés :</p>
+    <div class="kw" id="kw">
+      <button type="button">MacBook Pro M5 Pro</button>
+      <button type="button">MacBook Pro M4 Pro</button>
+      <button type="button">MacBook Pro M4 Max</button>
+      <button type="button">MacBook Pro M5 Max</button>
+      <button type="button">MacBook Pro M3 Pro</button>
+    </div>
+  </section>
+
+  <footer>Prix relevés automatiquement : vérifie toujours le prix final et le vendeur avant de payer.</footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+  "use strict";
+  var BUDGET = 2600, MIN_RAM = 24;
+  var VAPID_PUBLIC_KEY = "BJjWL2nd5-3xDR4CK-AZS3MsuPW7s4E7b_Fr8TRxvLrGzmf_FcHLPfL_kOd3mx--wUL8_BNOv2zQY7_sBMROmao";
+  var REPO = "Brraaa/mac-radar";
+  var state = { deals: [], meta: null, view: "budget", gen: "all", only16: false, loaded: null };
+  var $ = function (id) { return document.getElementById(id); };
+  var eur = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
+  var rtf = new Intl.RelativeTimeFormat("fr", { numeric: "auto" });
+
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]; }); }
+  function safeUrl(u) { return /^https?:\/\//i.test(String(u || "")) ? String(u) : null; }
+  function num(v) { var n = Number(v); return isFinite(n) ? n : null; }
+  function ago(iso) {
+    var t = Date.parse(iso); if (!isFinite(t)) return "";
+    var s = (t - Date.now()) / 1000, a = Math.abs(s);
+    if (a < 60) return "à l'instant";
+    if (a < 3600) return rtf.format(Math.round(s / 60), "minute");
+    if (a < 86400) return rtf.format(Math.round(s / 3600), "hour");
+    return rtf.format(Math.round(s / 86400), "day");
+  }
+  function shortAgo(iso) {
+    var t = Date.parse(iso); if (!isFinite(t)) return "–";
+    var m = Math.round((Date.now() - t) / 60000);
+    if (m < 1) return "0 min"; if (m < 60) return m + " min";
+    var h = Math.round(m / 60); if (h < 48) return h + " h";
+    return Math.round(h / 24) + " j";
+  }
+  function classify(d) {
+    if (d.status === "expired") return "expired";
+    var p = num(d.price), r = num(d.ram);
+    var okCond = d.condition === "neuf" || d.condition === "reco-apple";
+    if (p != null && p <= BUDGET && r != null && r >= MIN_RAM && okCond) return "budget";
+    return "watch";
+  }
+  function matchesFilters(d) {
+    if (state.gen !== "all" && String(d.gen || "") !== state.gen) return false;
+    if (state.only16 && num(d.size) !== 16) return false;
+    return true;
+  }
+  function card(d, cls) {
+    var price = num(d.price), old = num(d.oldPrice);
+    var pct = price && old && old > price ? Math.round((1 - price / old) * 100) : null;
+    var isNew = cls !== "expired" && isFinite(Date.parse(d.foundAt)) && (Date.now() - Date.parse(d.foundAt)) < 24 * 3600 * 1000;
+    var url = safeUrl(d.url), src = safeUrl(d.sourceUrl);
+    var size = num(d.size);
+    var title = "MacBook Pro " + (size ? size + "″ " : "") + esc(d.chip || "");
+    var specs = [];
+    if (d.cpuGpu) specs.push("CPU/GPU " + esc(d.cpuGpu));
+    if (num(d.ram)) specs.push(num(d.ram) + " Go RAM");
+    if (d.storage) specs.push("SSD " + esc(d.storage));
+    if (d.color) specs.push(esc(d.color));
+    if (num(d.temperature) != null) specs.push(num(d.temperature) + "° Dealabs");
+    var cond = d.condition === "reco-apple" ? '<span class="pill reco">Reconditionné Apple</span>' : '<span class="pill neuf">Neuf</span>';
+    var st = cls === "expired" ? '<span class="pill gone">Expirée</span>' : (d.status === "to_verify" ? '<span class="pill verify">Stock à vérifier</span>' : "");
+    var why = cls === "watch" && price != null && price > BUDGET ? "Au-dessus du budget de " + eur.format(price - BUDGET) + "." : "";
+    return '<article class="deal ' + cls + '">' +
+      '<div class="row"><h3 class="model">' + title + '</h3>' +
+      '<div class="priceBox"><div class="price">' + (price != null ? eur.format(price) : "?") + '</div>' +
+      (old ? '<div><span class="old">' + eur.format(old) + '</span>' + (pct ? '<span class="pct">−' + pct + ' %</span>' : "") + '</div>' : "") +
+      '</div></div>' +
+      '<div class="specs">' + specs.map(function (s) { return '<span class="spec">' + s + '</span>'; }).join("") + '</div>' +
+      '<div class="meta">' + (isNew ? '<span class="pill new">Nouveau</span>' : "") + cond + st +
+      '<span><strong>' + esc(d.merchant || "?") + '</strong></span>' +
+      (d.foundAt ? '<span>repéré ' + esc(ago(d.foundAt)) + '</span>' : "") +
+      '</div>' +
+      (d.title ? '<p class="note" style="color:var(--muted)">' + esc(d.title) + '</p>' : "") +
+      (d.note ? '<p class="note">' + esc(d.note) + '</p>' : "") +
+      (why ? '<p class="note">' + esc(why) + '</p>' : "") +
+      '<div class="actions">' +
+      (url ? '<a class="btn" href="' + esc(url) + '" target="_blank" rel="noopener">Voir l\'offre</a>' : "") +
+      (src && src !== url ? '<a class="btn ghost" href="' + esc(src) + '" target="_blank" rel="noopener">Source</a>' : "") +
+      '</div></article>';
+  }
+
+  function render() {
+    var groups = { budget: [], watch: [], expired: [] };
+    state.deals.forEach(function (d) { groups[classify(d)].push(d); });
+    groups.budget.sort(function (a, b) { return num(a.price) - num(b.price); });
+    groups.watch.sort(function (a, b) { return num(a.price) - num(b.price); });
+    groups.expired.sort(function (a, b) { return (Date.parse(b.checkedAt) || 0) - (Date.parse(a.checkedAt) || 0); });
+    $("nBudget").textContent = groups.budget.length || "";
+    $("nWatch").textContent = groups.watch.length || "";
+    $("nExpired").textContent = groups.expired.length || "";
+    $("sCount").textContent = state.loaded ? String(groups.budget.length) : "–";
+    $("sBest").textContent = groups.budget.length ? eur.format(num(groups.budget[0].price)) : "–";
+    $("sScan").textContent = state.meta && state.meta.lastScan ? shortAgo(state.meta.lastScan) : "–";
+
+    var items = groups[state.view].filter(matchesFilters), html;
+    if (state.loaded === false) html = '<div class="empty"><b>Impossible de charger les offres.</b> Vérifie ta connexion, la page réessaie toute seule.</div>';
+    else if (state.loaded === null) html = '<div class="empty">Chargement des offres…</div>';
+    else if (!items.length) {
+      var msg = state.view === "budget" ? "<b>Aucune offre dans ton budget pour l'instant.</b> Le robot continue : tu recevras une notif dès qu'un Mac passe sous 2 600 €." :
+        state.view === "watch" ? "<b>Rien à surveiller.</b> Ici apparaissent les bonnes affaires juste au-dessus de ton budget (jusqu'à 3 000 €)." : "<b>Aucune offre expirée.</b>";
+      if (state.gen !== "all" || state.only16) msg += " Essaie d'enlever le filtre.";
+      html = '<div class="empty">' + msg + '</div>';
+    } else html = items.map(function (d) { return card(d, state.view); }).join("");
+    $("list").innerHTML = html;
+
+    var stEl = $("status");
+    if (state.meta && state.meta.lastScan) {
+      var stale = Date.now() - Date.parse(state.meta.lastScan) > 90 * 60 * 1000;
+      stEl.innerHTML = '<span><span class="dot' + (stale ? " stale" : "") + '"></span>' + (stale ? "Scan en retard" : "Radar actif") + ' · dernier scan ' + esc(ago(state.meta.lastScan)) + '</span>' +
+        (state.meta.summary ? '<span>· ' + esc(state.meta.summary) + '</span>' : "");
+    } else if (state.loaded) stEl.innerHTML = '<span><span class="dot stale"></span>En attente du premier scan</span>';
+    renderSources();
+  }
+
+  function renderSources() {
+    var src = (state.meta && state.meta.sources) || {};
+    var names = Object.keys(src);
+    $("sources").innerHTML = names.length ? names.map(function (n) {
+      var s = src[n];
+      return '<li><b style="color:' + (s.ok ? "var(--good)" : "var(--bad)") + '">' + (s.ok ? "●" : "○") + '</b> ' + esc(n) +
+        '<small>' + (s.ok ? esc(s.count + " annonce" + (s.count > 1 ? "s" : "") + " lue" + (s.count > 1 ? "s" : "")) : esc("bloqué : " + (s.error || "erreur"))) + '</small></li>';
+    }).join("") : '<li>Apple Reconditionné, Dealabs, presse tech (Google et Bing Actualités), LDLC, Materiel.net, Boulanger, Fnac, Darty, Amazon<small>état affiché après le premier scan</small></li>';
+  }
+
+  function load() {
+    fetch("deals.json?t=" + Date.now(), { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error(r.status); return r.json();
+    }).then(function (data) {
+      state.meta = data; state.deals = Array.isArray(data.deals) ? data.deals : []; state.loaded = true; render();
+    }).catch(function () { if (!state.loaded) { state.loaded = false; render(); } });
+  }
+
+  // ---------- Notifications ----------
+  var isStandalone = window.navigator.standalone === true || (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches);
+  var canPush = "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
+  var isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  var swReg = null;
+
+  function b64ToUint8(b64) {
+    var pad = "=".repeat((4 - (b64.length % 4)) % 4);
+    var raw = atob((b64 + pad).replace(/-/g, "+").replace(/_/g, "/"));
+    var arr = new Uint8Array(raw.length);
+    for (var i = 0; i < raw.length; i++) arr[i] = raw.charCodeAt(i);
+    return arr;
+  }
+  function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+  function setNotif(text, actionsHtml) { $("notifText").innerHTML = text; $("notifActions").innerHTML = actionsHtml || ""; }
+
+  function issueUrl(sub) {
+    var body = "Abonnement de mon iPhone aux alertes Mac Radar.\n\n```json\n" + JSON.stringify(sub) + "\n```";
+    return "https://github.com/" + REPO + "/issues/new?title=" + encodeURIComponent("Abonnement iPhone") + "&body=" + encodeURIComponent(body);
+  }
+
+  function showSendStep(sub) {
+    setNotif("<b>Dernière étape :</b> envoie ton abonnement au robot. Touche le bouton, connecte-toi à GitHub si besoin, puis touche « Create » (ou « Submit new issue »). Tu reçois une notif de test dans la minute.",
+      '<a class="btn" id="sendSub" href="' + esc(issueUrl(sub)) + '" target="_blank" rel="noopener">Envoyer mon abonnement</a>' +
+      '<button class="btn ghost" id="copySub" type="button">Copier</button>');
+    $("sendSub").addEventListener("click", function () { lsSet("macradar.sent", "1"); setTimeout(refreshNotif, 1500); });
+    $("copySub").addEventListener("click", function () {
+      var t = JSON.stringify(sub);
+      if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { toast("Abonnement copié : colle-le à Claude"); }, function () { toast("Copie impossible"); });
+    });
+  }
+
+  function refreshNotif() {
+    if (!canPush) {
+      if (isIOS && !isStandalone) { setNotif("Pour recevoir les notifs, <b>ajoute Mac Radar à ton écran d'accueil</b> (voir ci-dessous), puis ouvre-le depuis l'icône."); }
+      else setNotif("Ce navigateur ne gère pas les notifications web. Sur iPhone, il faut iOS 16.4 ou plus récent et l'appli ajoutée à l'écran d'accueil.");
+      return;
+    }
+    if (isIOS && !isStandalone) { setNotif("Pour recevoir les notifs, <b>ajoute Mac Radar à ton écran d'accueil</b> (voir ci-dessous), puis ouvre-le depuis l'icône."); return; }
+    if (Notification.permission === "denied") { setNotif("Les notifications sont bloquées. Va dans Réglages › Notifications › Mac Radar et autorise-les, puis rouvre l'appli."); return; }
+    navigator.serviceWorker.register("sw.js").then(function (reg) {
+      swReg = reg; return navigator.serviceWorker.ready;
+    }).then(function (reg) { return reg.pushManager.getSubscription(); }).then(function (sub) {
+      if (sub && lsGet("macradar.sent") === "1") {
+        setNotif("✅ <b>Notifications actives sur cet appareil.</b> Si tu n'as pas reçu la notif de test, renvoie ton abonnement.",
+          '<a class="btn ghost" href="' + esc(issueUrl(sub.toJSON())) + '" target="_blank" rel="noopener">Renvoyer mon abonnement</a>');
+        $("installPanel").style.display = "none";
+      } else if (sub) {
+        showSendStep(sub.toJSON()); $("installPanel").style.display = "none";
+      } else {
+        setNotif("Active les notifications pour être prévenu dès qu'un Mac rentre dans ton budget.",
+          '<button class="btn" id="enableNotif" type="button">Activer les notifications</button>');
+        $("enableNotif").addEventListener("click", subscribe);
+        if (isStandalone) $("installPanel").style.display = "none";
+      }
+    }).catch(function (e) { setNotif("Erreur d'initialisation des notifications : " + esc(e && e.message)); });
+  }
+
+  function subscribe() {
+    Notification.requestPermission().then(function (perm) {
+      if (perm !== "granted") { refreshNotif(); return; }
+      return (swReg ? Promise.resolve(swReg) : navigator.serviceWorker.ready).then(function (reg) {
+        return reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64ToUint8(VAPID_PUBLIC_KEY) });
+      }).then(function (sub) { showSendStep(sub.toJSON()); });
+    }).catch(function (e) { setNotif("Impossible d'activer les notifications : " + esc(e && e.message)); });
+  }
+
+  // ---------- UI ----------
+  function toast(t) { var el = $("toast"); el.textContent = t; el.classList.add("show"); setTimeout(function () { el.classList.remove("show"); }, 1800); }
+  document.querySelectorAll(".tabs button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      state.view = b.getAttribute("data-view");
+      document.querySelectorAll(".tabs button").forEach(function (x) { x.setAttribute("aria-selected", x === b ? "true" : "false"); });
+      render();
+    });
+  });
+  document.querySelectorAll(".chips button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      if (b.hasAttribute("data-size")) { state.only16 = !state.only16; b.setAttribute("aria-pressed", state.only16 ? "true" : "false"); }
+      else {
+        state.gen = b.getAttribute("data-gen");
+        document.querySelectorAll(".chips button[data-gen]").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      }
+      render();
+    });
+  });
+  document.querySelectorAll("#kw button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var t = b.textContent;
+      if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { toast("Copié : " + t); }, function () { toast("Copie impossible"); });
+    });
+  });
+
+  render(); load(); refreshNotif();
+  setInterval(load, 60000);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) load(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "mac-radar-scanner",
+  "version": "1.0.0",
+  "description": "Scanner Mac Radar",
+  "scripts": {
+    "scan": "node scan.mjs"
+  },
+  "dependencies": {
+    "web-push": "^3.6.7"
+  },
+  "private": true
+}

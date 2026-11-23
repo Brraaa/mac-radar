@@ -1,0 +1,39 @@
+name: Abonner un téléphone aux notifications
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  subscribe:
+    if: github.event.issue.user.login == github.repository_owner && startsWith(github.event.issue.title, 'Abonnement')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci --omit=dev
+        working-directory: scanner
+      - name: Enregistrer l'abonnement
+        run: node scanner/subscribe.mjs
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+      - name: Sauvegarder
+        run: |
+          git config user.name "mac-radar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/subscriptions.json
+          git diff --cached --quiet || git commit -m "Nouvel appareil abonné"
+          for i in 1 2 3; do git pull --rebase --autostash && git push && break; sleep 5; done
+      - name: Fermer l'issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} --body "C'est bon : ce téléphone recevra les alertes Mac Radar. Une notification de test vient d'être envoyée."
+          gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }}

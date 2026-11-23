@@ -1,0 +1,8 @@
+{
+  "budget": 2600,
+  "watchMax": 3000,
+  "minRam": 24,
+  "appUrl": "https://brraaa.github.io/mac-radar/",
+  "vapidSubject": "https://brraaa.github.io/mac-radar/",
+  "vapidPublicKey": "BJjWL2nd5-3xDR4CK-AZS3MsuPW7s4E7b_Fr8TRxvLrGzmf_FcHLPfL_kOd3mx--wUL8_BNOv2zQY7_sBMROmao"
+}
