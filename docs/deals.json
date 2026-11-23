@@ -1,6 +1,6 @@
 {
-  "lastScan": "2026-11-23T14:59:29.130Z",
-  "summary": "2 offres dans le budget",
+  "lastScan": "2026-11-23T15:15:40.794Z",
+  "summary": "1 offre dans le budget",
   "budget": 2600,
   "minRam": 24,
   "sources": {
@@ -18,7 +18,7 @@
     },
     "Revendeurs": {
       "ok": true,
-      "count": 56
+      "count": 51
     }
   },
   "deals": [
@@ -41,10 +41,16 @@
       "source": "Apple Reconditionné",
       "title": "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Pro, CPU 15 cœurs et GPU 16 cœurs - Argent",
       "temperature": null,
-      "note": null,
+      "note": "En vente sur l'Apple Store (reconditionné) au moment du scan.",
       "foundAt": "2026-11-23T14:55:13.773Z",
-      "checkedAt": "2026-11-23T14:59:29.130Z",
-      "lastSeen": "2026-11-23T14:59:29.130Z"
+      "checkedAt": "2026-11-23T15:15:40.794Z",
+      "lastSeen": "2026-11-23T15:15:40.794Z",
+      "ramInferred": false,
+      "merchantUrl": null,
+      "listingInStock": false,
+      "fromRetailer": false,
+      "verifiedAt": "2026-11-23T15:15:40.794Z",
+      "verifyNote": "En vente sur l'Apple Store (reconditionné) au moment du scan."
     },
     {
       "id": "ldlc-m5pro-14-24-1to-2899",
@@ -67,8 +73,12 @@
       "temperature": null,
       "note": null,
       "foundAt": "2026-11-23T14:55:13.773Z",
-      "checkedAt": "2026-11-23T14:59:29.130Z",
-      "lastSeen": "2026-11-23T14:59:29.130Z"
+      "checkedAt": "2026-11-23T15:15:40.794Z",
+      "lastSeen": "2026-11-23T15:15:40.794Z",
+      "ramInferred": false,
+      "merchantUrl": "https://www.ldlc.com/fiche/PB00729170.html",
+      "listingInStock": true,
+      "fromRetailer": true
     },
     {
       "id": "boulanger-m5pro-14-24-1to-2599",
@@ -83,16 +93,23 @@
       "oldPrice": 2899,
       "merchant": "Boulanger",
       "condition": "neuf",
-      "status": "to_verify",
-      "url": "https://www.dealabs.com/share-deal/3463391",
+      "status": "active",
+      "url": "https://www.boulanger.com/ref/1235629",
       "sourceUrl": "https://www.dealabs.com/share-deal/3463391",
       "source": "Dealabs",
       "title": "PC Portable 14\" Apple Macbook Pro Liquid Retina XDR M5 Pro - CPU 15 coeurs / GPU 16 coeurs, 24 Go RAM, SSD 1 To",
       "temperature": 348,
-      "note": null,
+      "note": "Vérifié en stock (fiche produit) à 2 599 €.",
       "foundAt": "2026-11-23T14:57:23.775Z",
-      "checkedAt": "2026-11-23T14:59:29.130Z",
-      "lastSeen": "2026-11-23T14:59:29.130Z"
+      "checkedAt": "2026-11-23T15:15:40.794Z",
+      "lastSeen": "2026-11-23T15:15:40.794Z",
+      "ramInferred": false,
+      "merchantUrl": "https://www.dealabs.com/visit/threadmain/3463391",
+      "listingInStock": false,
+      "fromRetailer": false,
+      "verifiedAt": "2026-11-23T15:15:40.794Z",
+      "verifiedUrl": "https://www.boulanger.com/ref/1235629",
+      "verifyNote": "Vérifié en stock (fiche produit) à 2 599 €."
     },
     {
       "id": "materiel-net-m5pro-14-24-1to-2899",
@@ -224,19 +241,23 @@
       "ram": 24,
       "storage": "1 To",
       "price": 2699,
-      "oldPrice": 3062.99,
+      "oldPrice": 2899,
       "merchant": "Fnac",
       "condition": "neuf",
       "status": "to_verify",
       "url": "https://www.fnac.com/Apple-MacBook-Pro-14-1-To-SSD-24-Go-RAM-Puce-M5-Pro-CPU-15-coeurs-GPU-16-coeurs-Noir-sideral/a21322761/w-4",
       "sourceUrl": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=macbook+pro+m5+pro",
       "source": "Fnac",
-      "title": "Apple MacBook Pro 14\" 1 To SSD 24 Go RAM Puce M5 Pro CPU 15 cœurs GPU 16 cœurs Argent MacBook -&nbsp Apple 5 2 avis 5 Labo Fnac Black Friday Jusqu'à",
+      "title": "Apple MacBook Pro 14\" 1 To SSD 24 Go RAM Puce M5 Pro CPU 15 cœurs GPU 16 cœurs Noir sidéral MacBook - Apple 5 14 avis 5 Labo Fnac Black Friday Jusqu'à",
       "temperature": null,
       "note": null,
       "foundAt": "2026-11-23T14:59:29.130Z",
-      "checkedAt": "2026-11-23T14:59:29.130Z",
-      "lastSeen": "2026-11-23T14:59:29.130Z"
+      "checkedAt": "2026-11-23T15:15:40.794Z",
+      "lastSeen": "2026-11-23T15:15:40.794Z",
+      "ramInferred": false,
+      "merchantUrl": "https://www.fnac.com/Apple-MacBook-Pro-14-1-To-SSD-24-Go-RAM-Puce-M5-Pro-CPU-15-coeurs-GPU-16-coeurs-Noir-sideral/a21322761/w-4",
+      "listingInStock": true,
+      "fromRetailer": true
     },
     {
       "id": "fnac-m5pro-16-24-1to-2849",
@@ -261,6 +282,62 @@
       "foundAt": "2026-11-23T14:59:29.130Z",
       "checkedAt": "2026-11-23T14:59:29.130Z",
       "lastSeen": "2026-11-23T14:59:29.130Z"
+    },
+    {
+      "id": "fnac-m5pro-16-24-1to-2999",
+      "chip": "M5 Pro",
+      "gen": "M5",
+      "tier": "Pro",
+      "cpuGpu": "18/20",
+      "size": 16,
+      "ram": 24,
+      "ramInferred": false,
+      "storage": "1 To",
+      "price": 2999,
+      "oldPrice": 3399,
+      "merchant": "Fnac",
+      "condition": "neuf",
+      "status": "to_verify",
+      "url": "https://www.fnac.com/Apple-MacBook-Pro-16-1-To-SSD-24-Go-RAM-Puce-M5-Pro-CPU-18-coeurs-GPU-20-coeurs-Noir-sideral/a21322758/w-4",
+      "sourceUrl": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=macbook+pro+m5+pro",
+      "source": "Fnac",
+      "title": "Apple MacBook Pro 16\" 1 To SSD 24 Go RAM Puce M5 Pro CPU 18 cœurs GPU 20 cœurs Noir sidéral MacBook - Apple 5 16 avis Black Friday Jusqu'à",
+      "merchantUrl": "https://www.fnac.com/Apple-MacBook-Pro-16-1-To-SSD-24-Go-RAM-Puce-M5-Pro-CPU-18-coeurs-GPU-20-coeurs-Noir-sideral/a21322758/w-4",
+      "listingInStock": true,
+      "fromRetailer": true,
+      "temperature": null,
+      "foundAt": "2026-11-23T15:15:40.794Z",
+      "checkedAt": "2026-11-23T15:15:40.794Z",
+      "lastSeen": "2026-11-23T15:15:40.794Z",
+      "note": null
+    },
+    {
+      "id": "fnac-m4pro-16-24-512go-2779",
+      "chip": "M4 Pro",
+      "gen": "M4",
+      "tier": "Pro",
+      "cpuGpu": "14/20",
+      "size": 16,
+      "ram": 24,
+      "ramInferred": false,
+      "storage": "512 Go",
+      "price": 2779,
+      "oldPrice": null,
+      "merchant": "Fnac",
+      "condition": "neuf",
+      "status": "expired",
+      "url": "https://www.fnac.com/Apple-MacBook-Pro-16-512-Go-SSD-24-Go-RAM-Puce-M4-Pro-CPU-14-Coeurs-GPU-20-Coeurs-Noir-sideral/a20616298/w-4",
+      "sourceUrl": "https://www.fnac.com/SearchResult/ResultList.aspx?Search=macbook+pro+m4+pro",
+      "source": "Fnac",
+      "title": "Apple MacBook Pro 16\" 512 Go SSD 24 Go RAM Puce M4 Pro CPU 14 Cœurs GPU 20 Cœurs Noir sidéral MacBook - Apple 4,5 24 avis 5 Labo Fnac Revendez votre Mac pour",
+      "merchantUrl": "https://www.fnac.com/Apple-MacBook-Pro-16-512-Go-SSD-24-Go-RAM-Puce-M4-Pro-CPU-14-Coeurs-GPU-20-Coeurs-Noir-sideral/a20616298/w-4",
+      "listingInStock": false,
+      "fromRetailer": true,
+      "temperature": null,
+      "foundAt": "2026-11-23T15:15:40.794Z",
+      "checkedAt": "2026-11-23T15:15:40.794Z",
+      "lastSeen": "2026-11-23T15:15:40.794Z",
+      "note": null
     }
   ]
 }

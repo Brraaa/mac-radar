@@ -52,7 +52,6 @@
     "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Argent | {\"amount\":\"2 619,00 €\",\"raw_amount\":\"2619.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
     "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Vert | {\"amount\":\"2 619,00 €\",\"raw_amount\":\"2619.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"green\",\"tsMemorySize\":\"32gb\"}",
     "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Bleu | {\"amount\":\"2 619,00 €\",\"raw_amount\":\"2619.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"32gb\"}",
-    "Mac mini reconditionné avec puce Apple M4 Pro, CPU 14 cœurs, GPU 20 cœurs et 10 Gigabit Ethernet | {\"amount\":\"2 729,00 €\",\"raw_amount\":\"2729.00\"} | {\"dimensionCapacity\":\"1tb\",\"refurbClearModel\":\"macmini\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"48gb\"}",
     "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Pro, CPU 15 cœurs et GPU 16 cœurs - Argent | {\"amount\":\"2 929,00 €\",\"raw_amount\":\"2929.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
     "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Pro, CPU 15 cœurs et GPU 16 cœurs - Noir sidéral | {\"amount\":\"2 929,00 €\",\"raw_amount\":\"2929.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"24gb\"}",
     "Studio Display XDR reconditionné – Verre standard – Support à inclinaison et hauteur réglables | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>2 969,00 €\",\"raw_amount\":\"2969.00\"} | {\"dimensionScreensize\":\"27inch\",\"refurbClearModel\":\"display\",\"dimensionRelYear\":\"2026\"}",
@@ -138,7 +137,6 @@
     "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Argent | {\"amount\":\"2 619,00 €\",\"raw_amount\":\"2619.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"32gb\"}",
     "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Vert | {\"amount\":\"2 619,00 €\",\"raw_amount\":\"2619.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"green\",\"tsMemorySize\":\"32gb\"}",
     "iMac 24 pouces reconditionné avec puce Apple M4, CPU 10 cœurs et GPU 10 cœurs, Gigabit Ethernet, écran nano-texturé - Bleu | {\"amount\":\"2 619,00 €\",\"raw_amount\":\"2619.00\"} | {\"dimensionCapacity\":\"1tb\",\"dimensionScreensize\":\"24inch\",\"refurbClearModel\":\"imac\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"blue\",\"tsMemorySize\":\"32gb\"}",
-    "Mac mini reconditionné avec puce Apple M4 Pro, CPU 14 cœurs, GPU 20 cœurs et 10 Gigabit Ethernet | {\"amount\":\"2 729,00 €\",\"raw_amount\":\"2729.00\"} | {\"dimensionCapacity\":\"1tb\",\"refurbClearModel\":\"macmini\",\"dimensionRelYear\":\"2024\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"48gb\"}",
     "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Pro, CPU 15 cœurs et GPU 16 cœurs - Argent | {\"amount\":\"2 929,00 €\",\"raw_amount\":\"2929.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"silver\",\"tsMemorySize\":\"24gb\"}",
     "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Pro, CPU 15 cœurs et GPU 16 cœurs - Noir sidéral | {\"amount\":\"2 929,00 €\",\"raw_amount\":\"2929.00\"} | {\"dimensionCapacity\":\"2tb\",\"dimensionScreensize\":\"14inch\",\"refurbClearModel\":\"macbookpro\",\"dimensionRelYear\":\"2026\",\"dimensionColor\":\"spaceblack\",\"tsMemorySize\":\"24gb\"}",
     "Studio Display XDR reconditionné – Verre standard – Support à inclinaison et hauteur réglables | {\"amount\":\"<span class=\\\"visuallyhidden\\\">Maintenant</span>2 969,00 €\",\"raw_amount\":\"2969.00\"} | {\"dimensionScreensize\":\"27inch\",\"refurbClearModel\":\"display\",\"dimensionRelYear\":\"2026\"}",
@@ -176,7 +174,7 @@
   "dealabs": [
     {
       "q": "macbook pro m5 pro",
-      "len": 280691,
+      "len": 280663,
       "vue": 340,
       "threads": 30,
       "titles": [
@@ -243,7 +241,7 @@
     },
     {
       "q": "macbook pro m3 max",
-      "len": 86721,
+      "len": 86836,
       "vue": 60,
       "threads": 5,
       "titles": [
@@ -253,7 +251,17 @@
         "LEGO Speed Champions 77242 - Voiture F1 Ferrari SF-24(via 5,40€ fidélité)",
         "Sélection de montres Casio en promotion - ex: Montre Casio Collection à quartz en acier, Chronomètre, Argenté"
       ],
-      "around": "e-center listLayout aGrid \"><div aria-busy=\"true\" class=\"js-vue3\" style=\"height:44px;\" data-handler=\"vue3\" data-vue3='{\"name\":\"TagsCarousel\",\"props\":{\"results\":[{\"threadGroupId\":61,\"threadGroupName\":\"MacBook Pro\",\"threadGroupUrlName\":\"apple-macbook-pro\",\"imageUrls\":{\"avatar.avatar_web_square_38\":\"/thread_groups/raw/avatar/61_1/re/38x38/qt/70/61_1.jpg\",\"avatar.avatar_web_square_38_2x\":\"/thread_groups/raw/avatar/61_1/re/76x76/qt/70/61_1.jpg\"}},{\"threadGroupId\":2362,\"threadGroupName\":\"iPhone 16 Pro"
+      "around": "e-center listLayout aGrid \"><div aria-busy=\"true\" class=\"js-vue3\" style=\"height:44px;\" data-handler=\"vue3\" data-vue3='{\"name\":\"TagsCarousel\",\"props\":{\"results\":[{\"threadGroupId\":61,\"threadGroupName\":\"MacBook Pro\",\"threadGroupUrlName\":\"apple-macbook-pro\",\"imageUrls\":{\"avatar.avatar_web_square_38\":\"/thread_groups/raw/avatar/61_1/re/38x38/qt/70/61_1.jpg\",\"avatar.avatar_web_square_38_2x\":\"/thread_groups/raw/avatar/61_1/re/76x76/qt/70/61_1.jpg\"}},{\"threadGroupId\":2378,\"threadGroupName\":\"iPhone 18 Pro"
+    }
+  ],
+  "dealabsKeys": [
+    {
+      "keys": "threadId,titleSlug,title,currentUserVoteDirection,commentCount,status,isExpired,isGone,isNew,isPinned,bookmarked,isLocal,temperature,temperatureLevel,type,nsfw,deletedAt,bumpedAt,bumpedAndReset,publishedAt,lastCommentAt,updatedAt,voucherCode,linkHost,shareableLink,merchant,mainGroup,discussionGroup,mainImage,price,nextBestPrice,percentage,discountType,shipping,user,startDate,selectedLocations,endDate,isExclusive,isVoucherCodeHidden,claimCodeCampaignId,claimCodeCampaign,canVote,scheduledReleaseDate,isHot,pickedAt,hotDate,isExcludedFromAds,threadUpdates,unread,keywordNames,isSuperHot,listCardDescription",
+      "id": "3465506"
+    },
+    {
+      "keys": "threadId,titleSlug,title,currentUserVoteDirection,commentCount,status,isExpired,isGone,isNew,isPinned,bookmarked,isLocal,temperature,temperatureLevel,type,nsfw,deletedAt,bumpedAt,bumpedAndReset,publishedAt,lastCommentAt,updatedAt,voucherCode,linkHost,shareableLink,merchant,mainGroup,discussionGroup,mainImage,price,nextBestPrice,percentage,discountType,shipping,user,startDate,selectedLocations,endDate,isExclusive,isVoucherCodeHidden,claimCodeCampaignId,claimCodeCampaign,canVote,scheduledReleaseDate,isHot,pickedAt,hotDate,isExcludedFromAds,threadUpdates,unread,keywordNames,isSuperHot,listCardDescription",
+      "id": "3463391"
     }
   ],
   "news": [
@@ -276,7 +284,7 @@
         "Les prix des MacBook Pro M5 et M6 ont été annoncés",
         "MacBook Pro M5, M6 et OLED tactile, comment choisir son Mac portable",
         "Test des MacBook Pro PROLED XDR : le changement, c’est maintenant ?",
-        "Test du MacBook Pro M6 : plus rapide, mais pas plus excitant"
+        "Apple MacBook Pro (M5 Pro)"
       ]
     },
     {
@@ -298,23 +306,23 @@
     },
     {
       "feed": "https://news.google.com/rss/search?q=%22MacBook%20Pro%22%20%22M5%20Max%22%20promo%20when%3",
-      "len": 13769,
+      "len": 13810,
       "items": 9,
       "titles": [
+        "Grosse promo sur le MacBook Air M5 1To en 15 pouces : -330€ pour le Black Friday ! - Mac4Ever",
         "Le Black Friday atteint même les MacBook et les Mac mini : voici lees meilleures remises sur les ordinateurs d’Apple - Frandroid",
         "Le MacBook Air M6 pourrait être lancé dès mars 2027 - Consomac",
-        "Black Friday : voici le TOP 7 des meilleurs PC portables en promo - Frandroid",
-        "Grosse promo sur le MacBook Air M5 1To en 15 pouces : -330€ pour le Black Friday ! - Mac4Ever"
+        "Black Friday : voici le TOP 7 des meilleurs PC portables en promo - Frandroid"
       ]
     },
     {
       "feed": "https://www.bing.com/news/search?q=%22MacBook%20Pro%22%20%22M5%20Max%22%20promo&format=rss",
-      "len": 7556,
+      "len": 7611,
       "items": 8,
       "titles": [
         "MacBook Pro M5 Pro et M5 Max",
-        "Watch Apple’s promo video for the new MacBook Pro with PROLED XDR Display",
         "Les meilleures promos Black Friday de la semaine : TV, HONOR 600 Pro, MacBook Pro M5 Max, HONOR MagicPad4...",
+        "Watch Apple’s promo video for the new MacBook Pro with PROLED XDR Display",
         "Le MacBook Pro M6 est lancé, mais le 16\" M5 Max est bradé à -22% chez Amazon 🔥"
       ]
     },
@@ -326,7 +334,7 @@
     },
     {
       "feed": "https://www.bing.com/news/search?q=%22MacBook%20Pro%22%20%22M4%20Max%22%20promo&format=rss",
-      "len": 5071,
+      "len": 5072,
       "items": 5,
       "titles": [
         "Promo MacBook Pro : attention ce sont les derniers exemplaires en réduction de la version M4 Maxx avec écran Liquid Retina XDR",
@@ -337,8 +345,8 @@
     },
     {
       "feed": "https://news.google.com/rss/search?q=%22MacBook%20Pro%22%20bon%20plan%20when%3A2d&hl=fr&gl",
-      "len": 12290,
-      "items": 8,
+      "len": 14058,
+      "items": 9,
       "titles": [
         "À peine sorti, le MacBook Pro 14 M6 d’Apple perd déjà 200 € pour le Black Friday - Frandroid",
         "200 € de remise sur les MacBook Pro avec puce M6 - Consomac",
@@ -348,9 +356,14 @@
     },
     {
       "feed": "https://www.bing.com/news/search?q=%22MacBook%20Pro%22%20bon%20plan&format=rss&setlang=fr-",
-      "len": 361,
-      "items": 0,
-      "titles": []
+      "len": 8566,
+      "items": 8,
+      "titles": [
+        "Et voilà : ce MacBook Pro s'écoule par conteneurs depuis qu'il a atteint ce prix ultime",
+        "Bon plan Black Friday : le MacBook Air M5 13 pouces (16 Go, 512 Go) à 1199 euros sur Amazon",
+        "Bon plan – L'ordinateur Portable Apple MacBook Pro 14 (M5 Pro) 24 Go / 1 To \"5 étoiles\" à 2 331,94 €",
+        "Le MacBook Pro M5 est à prix bas pour une durée très limitée sur le site de la FNAC"
+      ]
     },
     {
       "feed": "https://news.google.com/rss/search?q=%22MacBook%20Pro%22%20Black%20Friday%20when%3A2d&hl=f",
@@ -365,12 +378,12 @@
     },
     {
       "feed": "https://www.bing.com/news/search?q=%22MacBook%20Pro%22%20Black%20Friday&format=rss&setlang",
-      "len": 8964,
+      "len": 9317,
       "items": 9,
       "titles": [
         "Black Friday Apple : MacBook Air ou MacBook Pro, quel modèle reconditionné acheter ?",
         "Pendant le Black Friday, quel MacBook acheter en promo ?",
-        "Black Friday MacBook Pro 13″ : 200 € de réduction sur les ordinateurs Apple à la Fnac",
+        "Comment le MacBook Pro peut-il avoir son prix qui baisse de plus de 874 euros en novembre 2026 ?",
         "Bon plan Black Friday : le MacBook Air M5 13 pouces (16 Go, 512 Go) à 1199 euros sur Amazon"
       ]
     }
@@ -378,64 +391,88 @@
   "retailers": [
     {
       "name": "LDLC",
-      "len": 214625,
-      "segments": 34,
+      "len": 217441,
+      "links": 30,
+      "blocks": 30,
       "samples": [
-        "macbook pro m5 pro\" Filtrer les produits : Trier / Filtrer Réinitialiser les filtres 30 produits correspondent Appliquer Réinitialiser les filtres Trier par : Sélectionner Défaut Prix croissant Prix décroissant Nouveautés Top des ventes Note moyenne Marque Cat",
-        "Apple MacBook Pro M5 Pro 14\" Noir sidéral (2026) 24 Go/1 To (MGDR4FN/A) Puce Apple M5 Pro CPU 15 coeurs (GPU 16 coeurs) 24 Go SSD 1 To 14\" LED Liquid Retina XDR Wi-Fi 7/Bluetooth Webcam macOS Tahoe 2 avis Votre Mac à partir de 84.89€/mois* ! Dispo Dispo Web : ",
-        "Apple MacBook Pro M5 Pro 16\" Noir sidéral (2026) 24 Go/1 To (MGEA4FN/A) Puce Apple M5 Pro CPU 18 coeurs (GPU 20 coeurs) 24 Go SSD 1 To 16\" LED Liquid Retina XDR Wi-Fi 7/Bluetooth Webcam macOS Tahoe 2 avis Dispo Dispo Web : stock#openModal\"> En stock Boutique s",
-        "Apple MacBook Pro M5 Pro 16\" Noir sidéral (2026) 48 Go/1 To (MGEC4FN/A) Puce Apple M5 Pro CPU 18 coeurs (GPU 20 coeurs) 48 Go SSD 1 To 16\" LED Liquid Retina XDR Wi-Fi 7/Bluetooth Webcam macOS Tahoe 2 avis Dispo Dispo Web : stock#openModal\"> En stock Boutique s"
+        "/fiche/PB00729170.html :: Trier par : Défaut Prix croissant Prix décroissant Nouveautés Top des ventes search-analytics#trackListingProduct auxclick->search-analytics#trackListingProduct\" > Apple MacBook Pro M5 Pro 14\" Noir sidéral (2026) 24 Go/1 To (MGDR4FN/A) Puce Apple M5 Pro CPU 15 coeurs (GPU 16 coeurs) 24 Go SSD 1 To 1",
+        "/fiche/PB00729180.html :: 03040031\" data-is-marketplace=\"0\" > Dispo dans 7 boutiques 2 899€ 00 search-analytics#trackListingProduct auxclick->search-analytics#trackListingProduct\" > Apple MacBook Pro M5 Pro 16\" Noir sidéral (2026) 24 Go/1 To (MGEA4FN/A) Puce Apple M5 Pro CPU 18 coeurs (GPU 20 coeurs) 24 Go SSD 1 To 16\" LED L",
+        "/fiche/PB00729182.html :: 03040041\" data-is-marketplace=\"0\" > Dispo dans 6 boutiques 3 399€ 00 search-analytics#trackListingProduct auxclick->search-analytics#trackListingProduct\" > Apple MacBook Pro M5 Pro 16\" Noir sidéral (2026) 48 Go/1 To (MGEC4FN/A) Puce Apple M5 Pro CPU 18 coeurs (GPU 20 coeurs) 48 Go SSD 1 To 16\" LED L"
       ]
     },
     {
       "name": "LDLC",
-      "len": 209445,
-      "segments": 11,
+      "len": 212261,
+      "links": 30,
+      "blocks": 30,
       "samples": [
-        "macbook pro m4 pro\" Filtrer les produits : Trier / Filtrer Réinitialiser les filtres 30 produits correspondent Appliquer Réinitialiser les filtres Trier par : Sélectionner Défaut Prix croissant Prix décroissant Nouveautés Top des ventes Note moyenne Marque Cat",
-        "Apple MacBook Pro M4 14\" Noir sidéral 16 Go/512 Go (MW2U3FN/A) Puce Apple M4 CPU 10 coeurs (GPU 10 coeurs) 16 Go SSD 512 Go 14\" LED Liquid Retina XDR Wi-Fi 6E/Bluetooth Webcam macOS Sequoia 30 avis Dispo Dispo Exclu Web : stock#openModal\"> 1 seul(e) en stock !",
-        "MacBook Pro 14\" M1 M2 M3 M4 M5 Dispo Dispo Web : stock#openModal\"> En stock Boutique sélectionnée : Changer 64€ 95 search-analytics#trackListingProduct auxclick->search-analytics#trackListingProduct\" > Promotion UAG Coque pour ",
-        "MacBook Pro 16\" (M4/3/2) Série Essential Armor Antichoc Dispo Dispo Exclu Web : stock#openModal\"> En stock 59€ 90 56€ 90 search-analytics#trackListingProduct auxclick->search-analytics#trackListingProduct\" > Promotion MW Protection d'Écran pour "
+        "/fiche/PB00651921.html :: \"sort-option\">Trier par : Défaut Prix croissant Prix décroissant Nouveautés Top des ventes search-analytics#trackListingProduct auxclick->search-analytics#trackListingProduct\" > Reconditionné Apple MacBook Pro M4 14\" Noir sidéral 16 Go/512 Go (MW2U3FN/A) Puce Apple M4 CPU 10 coeurs (GPU 10 coeurs) 1",
+        "/fiche/PB00736364.html :: ick->stock#openModal\"> 1 seul(e) en stock ! 1 979€ 00 search-analytics#trackListingProduct auxclick->search-analytics#trackListingProduct\" > StarTech.com Filtre de Confidentialité/Filtre Magnétique Antireflet pour MacBook Pro 14\" M1 M2 M3 M4 M5 Écran filtre de confidentialité magnétique contre la lu",
+        "/fiche/PB00757213.html :: an> 64€ 95 search-analytics#trackListingProduct auxclick->search-analytics#trackListingProduct\" > Promotion UAG Coque pour MacBook Pro 16\" (M4/3/2) Série Essential Armor Antichoc Transparent Coque pour MacBook Pro 16\" (M4/3/2) Série Essential Armor Antichoc Dispo Dispo Exclu Web : stock#openModal\"> "
       ]
     },
     {
       "name": "Materiel.net",
       "len": 233866,
-      "segments": 26,
-      "samples": [
-        "Apple MacBook Pro M5 Pro 14\" Noir sidéral 24 Go / 1 To (MGDR4FN/A) MacBook 14\", Apple M5 Pro (CPU 15 coeurs / GPU 16 coeurs), RAM 24 Go, SSD 1 To, Mac OS Tahoe, AZERTY 4 avis 7% avec le code BLACKTOP jusqu'au 26/11 2 899€ 00 stock#openModal\"> Dispo web : En st",
-        "Apple MacBook Pro M5 Pro 16\" Argent 24 Go / 1 To (MGE44FN/A) MacBook 16\", Apple M5 Pro (CPU 18 coeurs / GPU 20 coeurs), RAM 24 Go, SSD 1 To, Mac OS Tahoe, AZERTY 4 avis 7% avec le code BLACKTOP jusqu'au 26/11 3 399€ 00 stock#openModal\"> Dispo web : En stock se",
-        "Apple MacBook Pro M5 Pro 16\" Noir sidéral 24 Go / 1 To (MGEA4FN/A) MacBook 16\", Apple M5 Pro (CPU 18 coeurs / GPU 20 coeurs), RAM 24 Go, SSD 1 To, Mac OS Tahoe, AZERTY 4 avis 7% avec le code BLACKTOP jusqu'au 26/11 3 399€ 00 stock#openModal\"> Dispo web : En st",
-        "Apple MacBook Pro M5 Pro 14\" Argent 24 Go / 1 To (MGDN4FN/A) MacBook 14\", Apple M5 Pro (CPU 15 coeurs / GPU 16 coeurs), RAM 24 Go, SSD 1 To, Mac OS Tahoe, AZERTY 4 avis 7% avec le code BLACKTOP jusqu'au 26/11 2 899€ 00 stock#openModal\"> Dispo web : En stock se"
-      ]
+      "links": 0,
+      "blocks": 0,
+      "samples": []
     },
     {
       "name": "Boulanger",
-      "len": 743022,
-      "segments": 26,
+      "len": 743023,
+      "links": 20,
+      "blocks": 20,
+      "samples": []
+    },
+    {
+      "name": "Boulanger",
+      "len": 709418,
+      "links": 2,
+      "blocks": 2,
+      "samples": []
+    },
+    {
+      "name": "Fnac",
+      "len": 423317,
+      "links": 20,
+      "blocks": 20,
       "samples": [
-        "macbook pro m5 pro | Boulanger Accéder directement à la navigation Accéder directement au résultat de recherche Accéder directement au contenu Accéder directement au pied de page Accéder directement au chatbot Black Friday : 1 mois pour se faire plaisir sur vo",
-        "Apple MACBOOK Pro 14\" PROLED XDR M5 Pro CPU 18 coeurs / GPU 20 coeurs 48 Go RAM SSD 1 To Noir sidéral Revendre votre appareil Louer dès 104,99€/mois Ecran : 14\" Tactile, Dalle : OLED Processeur : Apple M5 Pro, 18 coeurs Stockage : SSD 1 To, Mémoire vive : 48 G",
-        "Apple MACBOOK Pro 16\" PROLED XDR M5 Pro CPU 18 coeurs / GPU 20 coeurs 24 Go RAM SSD 1 To Noir sidéral Revendre votre appareil Louer dès 98,49€/mois Ecran : 16\" Tactile, Dalle : OLED Processeur : Apple M5 Pro, 18 coeurs Stockage : SSD 1 To, Mémoire vive : 24 Go",
-        "Apple MACBOOK Pro 14\" PROLED XDR M5 Pro CPU 15 coeurs / GPU 16 coeurs 24 Go RAM SSD 1 To Noir sidéral Revendre votre appareil Ecran : 14\" Tactile, Dalle : OLED Processeur : Apple M5 Pro, 15 coeurs Stockage : SSD 1 To, Mémoire vive : 24 Go Chargeur : non fourni"
+        "https://www.fnac.com/Apple-MacBook-Pro-14-1-To-SSD-24-Go-RAM-Puce-M5-Pro-CPU-15-coeurs-GPU-16-coeurs-Noir-sideral/a21322761/w-4 :: 8.svg#$\" /> Apple MacBook Pro 14\" 1 To SSD 24 Go RAM Puce M5 Pro CPU 15 cœurs GPU 16 cœurs Noir sidéral MacBook - Apple 5 14 avis 5 Labo Fnac Black Friday Jusqu'à 30€ offerts* Voir le produit Modèle du processeur Apple M5 Pro 15 Cœurs Taille de l'écran (pouces) 14,2 \" RAM installée 24 Go En stock en",
+        "https://www.fnac.com/Apple-MacBook-Pro-14-1-To-SSD-24-Go-RAM-Puce-M5-Pro-CPU-15-coeurs-GPU-16-coeurs-Argent/a21322704/w-4 :: 8.svg#$\" /> Apple MacBook Pro 14\" 1 To SSD 24 Go RAM Puce M5 Pro CPU 15 cœurs GPU 16 cœurs Argent MacBook - Apple 5 2 avis 5 Labo Fnac Black Friday Jusqu'à 30€ offerts* Voir le produit Modèle du processeur Apple M5 Pro 15 Cœurs Taille de l'écran (pouces) 14,2 \" RAM installée 24 Go En stock en ligne ",
+        "https://www.fnac.com/Apple-MacBook-Pro-14-2-To-SSD-24-Go-RAM-Puce-M5-Pro-CPU-15-coeurs-GPU-16-coeurs-Argent/a21322702/w-4 :: 8.svg#$\" /> Apple MacBook Pro 14\" 2 To SSD 24 Go RAM Puce M5 Pro CPU 15 cœurs GPU 16 cœurs Argent MacBook - Apple 5 Labo Fnac Jusqu'à 30€ offerts* Carte Fnac+ à 7€99 Voir le produit Modèle du processeur Apple M5 Pro 15 Cœurs Taille de l'écran (pouces) 14,2 \" RAM installée 24 Go En stock en ligne Liv"
       ]
     },
     {
       "name": "Fnac",
-      "len": 424597,
-      "segments": 24,
+      "len": 466611,
+      "links": 19,
+      "blocks": 19,
       "samples": [
-        "macbook pro m5 pro Aller au contenu principal Aller au moteur de recherche Aller au pied de page # LIBÉRONS LA CULTURE Une question ? Trouver mon magasin Adhérez à Fnac + Rayons fnac.com Me connecter Mon panier articles dans Mon panier Bons plans Le Black Frid",
-        "Apple MacBook Pro 14\" 1 To SSD 24 Go RAM Puce M5 Pro CPU 15 cœurs GPU 16 cœurs Noir sidéral MacBook -&nbsp Apple 5 14 avis 5 Labo Fnac Black Friday Jusqu'à 30€ offerts* Voir le produit Modèle du processeur Apple M5 Pro 15 Cœurs Taille de l'écran (pouces) 14,2 ",
-        "Apple MacBook Pro 14\" 1 To SSD 24 Go RAM Puce M5 Pro CPU 15 cœurs GPU 16 cœurs Argent MacBook -&nbsp Apple 5 2 avis 5 Labo Fnac Black Friday Jusqu'à 30€ offerts* Voir le produit Modèle du processeur Apple M5 Pro 15 Cœurs Taille de l'écran (pouces) 14,2 \" RAM i",
-        "Apple MacBook Pro 14\" 2 To SSD 24 Go RAM Puce M5 Pro CPU 15 cœurs GPU 16 cœurs Argent MacBook -&nbsp Apple 5 Labo Fnac Jusqu'à 30€ offerts* Carte Fnac+ à 7€99 Voir le produit Modèle du processeur Apple M5 Pro 15 Cœurs Taille de l'écran (pouces) 14,2 \" RAM inst"
+        "https://www.fnac.com/Apple-MacBook-Pro-16-512-Go-SSD-24-Go-RAM-Puce-M4-Pro-CPU-14-Coeurs-GPU-20-Coeurs-Noir-sideral/a20616298/w-4 :: 8.svg#$\" /> Apple MacBook Pro 16\" 512 Go SSD 24 Go RAM Puce M4 Pro CPU 14 Cœurs GPU 20 Cœurs Noir sidéral MacBook - Apple 4,5 24 avis 5 Labo Fnac Revendez votre Mac pour 196 €* Carte Fnac+ à 7€99 Voir le produit Modèle du processeur Apple M4 PRO 14 cœurs Capacité de stockage 512 Go Taille de l'écran",
+        "https://www.fnac.com/Apple-MacBook-Pro-14-512-Go-SSD-24-Go-RAM-Puce-M4-Pro-CPU-12-Coeurs-GPU-16-Coeurs-Noir-sideral/a20616255/w-4 :: 8.svg#$\" /> Apple MacBook Pro 14\" 512 Go SSD 24 Go RAM Puce M4 Pro CPU 12 Cœurs GPU 16 Cœurs Noir sidéral MacBook - Apple 5 33 avis 5 Labo Fnac Revendez votre Mac pour 196 €* Carte Fnac+ à 7€99 Voir le produit Modèle du processeur Apple M4 PRO 12 cœurs Capacité de stockage 512 Go Taille de l'écran (",
+        "https://www.fnac.com/Apple-MacBook-Pro-14-512-Go-SSD-16-Go-RAM-Puce-M4-CPU-10-Coeurs-GPU-10-Coeurs-Noir-sideral/a19748308/w-4 :: 8.svg#$\" /> Apple MacBook Pro 14\" 512 Go SSD 16 Go RAM Puce M4 CPU 10 Cœurs GPU 10 Cœurs Noir sidéral MacBook - Apple 5 61 avis LIVRAISON OFFERTE Voir le produit Modèle du processeur Apple M4 10 cœurs Capacité de stockage 512 Go Taille de l'écran (pouces) 14 \" En stock vendeur partenaire Vendu et li"
       ]
     },
     {
       "name": "Amazon",
-      "len": 2327,
-      "segments": 0,
-      "samples": []
+      "len": 1125296,
+      "links": 48,
+      "blocks": 48,
+      "samples": [
+        "/Brydge-daccueil-dordinateur-portable-compatible/dp/B0H89ZSN98 :: s-widget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_8\" data-csa-c-type=\"item\" data-csa-c-content-id=\"search-results_8\" data-csa-c-item-id=\"amzn1.asin.1.B0H89ZSN98\" data-csa-c-asin-instance-id=\"0d3a386d-cbd3-40d2-bd48-a21ceff0bcab\" data-csa-c-cs-type=\"L",
+        "/Brydge-daccueil-dordinateur-chargement-compatible/dp/B0H89V66Y1 :: dget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_10\" data-csa-c-type=\"item\" data-csa-c-content-id=\"search-results_10\" data-csa-c-item-id=\"amzn1.asin.1.B0H89V66Y1\" data-csa-c-asin-instance-id=\"9d258b63-58da-4919-b398-1936d85b4bfe\" data-csa-c-cs-type=\"Loo",
+        "/Brydge-daccueil-moniteur-verticale-Thunderbolt/dp/B0H25QPYXX :: dget-container-height-small celwidget slot=MAIN template=SEARCH_RESULTS widgetId=search-results_11\" data-csa-c-type=\"item\" data-csa-c-content-id=\"search-results_11\" data-csa-c-item-id=\"amzn1.asin.1.B0H25QPYXX\" data-csa-c-asin-instance-id=\"6d32d3c3-46eb-49fe-a002-cc5bd44d9fcb\" data-csa-c-cs-type=\"Loo"
+      ]
+    }
+  ],
+  "verify": [
+    {
+      "id": "boulanger-m5pro-14-24-1to-2599",
+      "url": "https://www.boulanger.com/ref/1235629",
+      "verdict": "ok",
+      "price": 2599,
+      "reason": "en stock (fiche produit)"
     }
   ]
 }
