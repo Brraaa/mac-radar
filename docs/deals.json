@@ -1,1 +1,122 @@
-{"lastScan":null,"summary":"","deals":[],"sources":{}}
+{
+  "lastScan": "2026-11-23T14:52:50.214Z",
+  "summary": "1 offre dans le budget",
+  "budget": 2600,
+  "minRam": 24,
+  "sources": {
+    "Apple Reconditionné": {
+      "ok": true,
+      "count": 29
+    },
+    "Dealabs": {
+      "ok": true,
+      "count": 0
+    },
+    "Actus (Google/Bing)": {
+      "ok": true,
+      "count": 0
+    },
+    "Revendeurs": {
+      "ok": true,
+      "count": 31
+    }
+  },
+  "deals": [
+    {
+      "id": "apple-reconditionne-m4pro-x-24-2to-2449",
+      "chip": "M4 Pro",
+      "gen": "M4",
+      "tier": "Pro",
+      "cpuGpu": "12/16",
+      "size": null,
+      "ram": 24,
+      "storage": "2 To",
+      "price": 2449,
+      "oldPrice": null,
+      "merchant": "Apple Reconditionné",
+      "condition": "reco-apple",
+      "status": "active",
+      "url": "https://www.apple.com/fr/shop/product/g1jvbf/a/Mac-mini-reconditionn%C3%A9-avec-puce-Apple-M4-Pro-CPU-12-c%C5%93urs-GPU-16-c%C5%93urs-et-10-Gigabit-Ethernet",
+      "sourceUrl": "https://www.apple.com/fr/shop/refurbished/mac/macbook-pro",
+      "source": "Apple Reconditionné",
+      "title": "Mac mini reconditionné avec puce Apple M4 Pro, CPU 12 cœurs, GPU 16 cœurs et 10 Gigabit Ethernet",
+      "temperature": null,
+      "note": null,
+      "foundAt": "2026-11-23T14:52:50.214Z",
+      "checkedAt": "2026-11-23T14:52:50.214Z",
+      "lastSeen": "2026-11-23T14:52:50.214Z"
+    },
+    {
+      "id": "apple-reconditionne-m4pro-x-48-1to-2729",
+      "chip": "M4 Pro",
+      "gen": "M4",
+      "tier": "Pro",
+      "cpuGpu": "14/20",
+      "size": null,
+      "ram": 48,
+      "storage": "1 To",
+      "price": 2729,
+      "oldPrice": null,
+      "merchant": "Apple Reconditionné",
+      "condition": "reco-apple",
+      "status": "active",
+      "url": "https://www.apple.com/fr/shop/product/g1jv8f/a/Mac-mini-reconditionn%C3%A9-avec-puce-Apple-M4-Pro-CPU-14-c%C5%93urs-GPU-20-c%C5%93urs-et-10-Gigabit-Ethernet",
+      "sourceUrl": "https://www.apple.com/fr/shop/refurbished/mac/macbook-pro",
+      "source": "Apple Reconditionné",
+      "title": "Mac mini reconditionné avec puce Apple M4 Pro, CPU 14 cœurs, GPU 20 cœurs et 10 Gigabit Ethernet",
+      "temperature": null,
+      "note": null,
+      "foundAt": "2026-11-23T14:52:50.214Z",
+      "checkedAt": "2026-11-23T14:52:50.214Z",
+      "lastSeen": "2026-11-23T14:52:50.214Z"
+    },
+    {
+      "id": "apple-reconditionne-m5pro-14-24-2to-2929",
+      "chip": "M5 Pro",
+      "gen": "M5",
+      "tier": "Pro",
+      "cpuGpu": "15/16",
+      "size": 14,
+      "ram": 24,
+      "storage": "2 To",
+      "price": 2929,
+      "oldPrice": null,
+      "merchant": "Apple Reconditionné",
+      "condition": "reco-apple",
+      "status": "active",
+      "url": "https://www.apple.com/fr/shop/product/g1mhaf/a/MacBook-Pro-14-pouces-reconditionn%C3%A9-avec-puce-Apple-M5-Pro-CPU-15-c%C5%93urs-et-GPU-16-c%C5%93urs-Argent",
+      "sourceUrl": "https://www.apple.com/fr/shop/refurbished/mac/macbook-pro",
+      "source": "Apple Reconditionné",
+      "title": "MacBook Pro 14 pouces reconditionné avec puce Apple M5 Pro, CPU 15 cœurs et GPU 16 cœurs - Argent",
+      "temperature": null,
+      "note": null,
+      "foundAt": "2026-11-23T14:52:50.214Z",
+      "checkedAt": "2026-11-23T14:52:50.214Z",
+      "lastSeen": "2026-11-23T14:52:50.214Z"
+    },
+    {
+      "id": "ldlc-m5pro-14-24-1to-2899",
+      "chip": "M5 Pro",
+      "gen": "M5",
+      "tier": "Pro",
+      "cpuGpu": null,
+      "size": 14,
+      "ram": 24,
+      "storage": "1 To",
+      "price": 2899,
+      "oldPrice": null,
+      "merchant": "LDLC",
+      "condition": "neuf",
+      "status": "to_verify",
+      "url": "https://www.ldlc.com/fiche/PB00744763.html",
+      "sourceUrl": "https://www.ldlc.com/recherche/macbook%20pro%20m5%20pro/",
+      "source": "LDLC",
+      "title": "\" data-position=\"28\" data-id=\"AR202606090052\" data-offer-id=\"AR202606090052\" data-insights-object-id=\"AR202606090052\" data-insights-position=\"28\" data-insights-",
+      "temperature": null,
+      "note": null,
+      "foundAt": "2026-11-23T14:52:50.214Z",
+      "checkedAt": "2026-11-23T14:52:50.214Z",
+      "lastSeen": "2026-11-23T14:52:50.214Z"
+    }
+  ]
+}
