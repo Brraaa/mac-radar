@@ -479,7 +479,8 @@ async function main() {
   // Vérification en direct sur la page du vendeur, pour toute offre (hors reconditionné Apple) au prix du budget
   for (const rec of candidates) {
     if (rec.status === "expired" || rec.condition === "reco-apple" || rec.price > BUDGET) continue;
-    const res = await verifyOffer(rec.merchantUrl, rec);
+    const vurl = rec.merchantUrl || (/dealabs\.com|news\.google|bing\.com/.test(rec.url || "") ? null : rec.url);
+    const res = await verifyOffer(vurl, rec);
     dbg("verify", { id: rec.id, url: rec.merchantUrl, ...res });
     rec.checkedAt = NOW.toISOString();
     if (res.verdict === "ok") {
