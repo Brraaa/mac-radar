@@ -60,7 +60,7 @@ function decodeEntities(s) {
     .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n))
     .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
     .replace(/&quot;/g, '"').replace(/&#039;|&apos;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
-    .replace(/&nbsp;/g, " ").replace(/&euro;/g, "€").replace(/&amp;/g, "&");
+    .replace(/&nbsp;?/g, " ").replace(/&euro;/g, "€").replace(/&amp;/g, "&");
 }
 function stripTags(s) { return decodeEntities(String(s || "").replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim(); }
 

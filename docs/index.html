@@ -283,7 +283,7 @@ footer { font-size: 12px; color: var(--muted); text-align: center; }
     if (num(d.ram)) specs.push(num(d.ram) + " Go RAM");
     if (d.storage) specs.push("SSD " + esc(d.storage));
     if (d.color) specs.push(esc(d.color));
-    if (num(d.temperature) != null) specs.push(num(d.temperature) + "° Dealabs");
+    if (d.temperature != null && d.source === "Dealabs") specs.push(num(d.temperature) + "° Dealabs");
     var cond = d.condition === "reco-apple" ? '<span class="pill reco">Reconditionné Apple</span>' : '<span class="pill neuf">Neuf</span>';
     var st = cls === "expired" ? '<span class="pill gone">Expirée</span>' : (d.status === "to_verify" ? '<span class="pill verify">Stock à vérifier</span>' : "");
     var why = cls === "watch" && price != null && price > BUDGET ? "Au-dessus du budget de " + eur.format(price - BUDGET) + "." : "";
