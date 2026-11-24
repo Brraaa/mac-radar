@@ -1,12 +1,12 @@
 {
-  "lastScan": "2026-11-24T02:00:10.377Z",
+  "lastScan": "2026-11-24T12:21:47.491Z",
   "summary": "0 offre dans le budget",
   "budget": 2600,
   "minRam": 24,
   "sources": {
     "Apple Reconditionné": {
       "ok": true,
-      "count": 24
+      "count": 23
     },
     "Dealabs": {
       "ok": true,
@@ -18,7 +18,7 @@
     },
     "Revendeurs": {
       "ok": true,
-      "count": 53
+      "count": 29
     }
   },
   "deals": [
@@ -43,13 +43,13 @@
       "temperature": null,
       "note": "En vente sur l'Apple Store (reconditionné) au moment du scan.",
       "foundAt": "2026-11-23T14:55:13.773Z",
-      "checkedAt": "2026-11-24T02:00:10.377Z",
-      "lastSeen": "2026-11-24T02:00:10.377Z",
+      "checkedAt": "2026-11-24T12:21:47.491Z",
+      "lastSeen": "2026-11-24T12:21:47.491Z",
       "ramInferred": false,
       "merchantUrl": null,
       "listingInStock": false,
       "fromRetailer": false,
-      "verifiedAt": "2026-11-24T02:00:10.377Z",
+      "verifiedAt": "2026-11-24T12:21:47.491Z",
       "verifyNote": "En vente sur l'Apple Store (reconditionné) au moment du scan."
     },
     {
@@ -73,8 +73,8 @@
       "temperature": null,
       "note": null,
       "foundAt": "2026-11-23T14:55:13.773Z",
-      "checkedAt": "2026-11-24T02:00:10.377Z",
-      "lastSeen": "2026-11-24T02:00:10.377Z",
+      "checkedAt": "2026-11-24T12:21:47.491Z",
+      "lastSeen": "2026-11-24T12:21:47.491Z",
       "ramInferred": false,
       "merchantUrl": "https://www.ldlc.com/fiche/PB00729170.html",
       "listingInStock": true,
@@ -101,8 +101,8 @@
       "temperature": 351,
       "note": "Non vérifiable automatiquement (la page ne correspond pas exactement au modèle) : pas de notification.",
       "foundAt": "2026-11-23T14:57:23.775Z",
-      "checkedAt": "2026-11-24T02:00:10.377Z",
-      "lastSeen": "2026-11-24T02:00:10.377Z",
+      "checkedAt": "2026-11-24T12:21:47.491Z",
+      "lastSeen": "2026-11-24T12:21:47.491Z",
       "ramInferred": false,
       "merchantUrl": "https://www.dealabs.com/visit/threadmain/3463391",
       "listingInStock": false,
