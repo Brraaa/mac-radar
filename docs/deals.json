@@ -1,5 +1,5 @@
 {
-  "lastScan": "2026-11-24T22:44:37.679Z",
+  "lastScan": "2026-11-25T05:14:15.058Z",
   "summary": "2 offres dans le budget",
   "budget": 2600,
   "minRam": 24,
@@ -14,11 +14,11 @@
     },
     "Actus (Google/Bing)": {
       "ok": true,
-      "count": 12
+      "count": 4
     },
     "Revendeurs": {
       "ok": true,
-      "count": 55
+      "count": 0
     }
   },
   "deals": [
@@ -43,13 +43,13 @@
       "temperature": null,
       "note": "En vente sur l'Apple Store (reconditionné) au moment du scan.",
       "foundAt": "2026-11-23T14:55:13.773Z",
-      "checkedAt": "2026-11-24T22:44:37.679Z",
-      "lastSeen": "2026-11-24T22:44:37.679Z",
+      "checkedAt": "2026-11-25T05:14:15.058Z",
+      "lastSeen": "2026-11-25T05:14:15.058Z",
       "ramInferred": false,
       "merchantUrl": null,
       "listingInStock": false,
       "fromRetailer": false,
-      "verifiedAt": "2026-11-24T22:44:37.679Z",
+      "verifiedAt": "2026-11-25T05:14:15.058Z",
       "verifyNote": "En vente sur l'Apple Store (reconditionné) au moment du scan."
     },
     {
@@ -98,16 +98,16 @@
       "sourceUrl": "https://www.dealabs.com/share-deal/3463391",
       "source": "Dealabs",
       "title": "PC Portable 14\" Apple Macbook Pro Liquid Retina XDR M5 Pro - CPU 15 coeurs / GPU 16 coeurs, 24 Go RAM, SSD 1 To",
-      "temperature": 351,
+      "temperature": 353,
       "note": "Vérifié en stock (fiche produit) à 2 599 €.",
       "foundAt": "2026-11-23T14:57:23.775Z",
-      "checkedAt": "2026-11-24T22:44:37.679Z",
-      "lastSeen": "2026-11-24T22:44:37.679Z",
+      "checkedAt": "2026-11-25T05:14:15.058Z",
+      "lastSeen": "2026-11-25T05:14:15.058Z",
       "ramInferred": false,
       "merchantUrl": "https://www.dealabs.com/visit/threadmain/3463391",
       "listingInStock": false,
       "fromRetailer": false,
-      "verifiedAt": "2026-11-24T22:44:37.679Z",
+      "verifiedAt": "2026-11-25T05:14:15.058Z",
       "verifiedUrl": "https://www.boulanger.com/ref/1235629",
       "verifyNote": "Vérifié en stock (fiche produit) à 2 599 €."
     },
@@ -365,9 +365,9 @@
       "fromRetailer": false,
       "temperature": null,
       "foundAt": "2026-11-24T22:44:37.679Z",
-      "checkedAt": "2026-11-24T22:44:37.679Z",
-      "lastSeen": "2026-11-24T22:44:37.679Z",
-      "verifiedAt": "2026-11-24T22:44:37.679Z",
+      "checkedAt": "2026-11-25T05:14:15.058Z",
+      "lastSeen": "2026-11-25T05:14:15.058Z",
+      "verifiedAt": "2026-11-25T05:14:15.058Z",
       "verifyNote": "En vente sur l'Apple Store (reconditionné) au moment du scan.",
       "note": "En vente sur l'Apple Store (reconditionné) au moment du scan."
     },
@@ -395,7 +395,7 @@
       "fromRetailer": false,
       "temperature": null,
       "foundAt": "2026-11-24T22:44:37.679Z",
-      "checkedAt": "2026-11-24T22:44:37.679Z",
+      "checkedAt": "2026-11-25T05:14:15.058Z",
       "lastSeen": "2026-11-24T22:44:37.679Z",
       "verifyNote": "Non vérifiable automatiquement (pas de lien vers le vendeur) : pas de notification.",
       "note": "RAM non précisée : 24 Go minimum sur cette puce. Non vérifiable automatiquement (pas de lien vers le vendeur) : pas de notification."
@@ -415,8 +415,8 @@
       "merchant": "Actualités",
       "condition": "neuf",
       "status": "to_verify",
-      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b06135cf08343eb8612aab682deaae5&url=https%3a%2f%2fwww.mac4ever.com%2fmac%2f199267-grosses-promos-sur-les-macbook-pro-m5-pro-max-jusqu-a-1100-par-rapport-a-l-apple-store&c=13352536382815107599&mkt=fr-fr",
-      "sourceUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b06135cf08343eb8612aab682deaae5&url=https%3a%2f%2fwww.mac4ever.com%2fmac%2f199267-grosses-promos-sur-les-macbook-pro-m5-pro-max-jusqu-a-1100-par-rapport-a-l-apple-store&c=13352536382815107599&mkt=fr-fr",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b066eb2ad1d4dac86c26a6daa668dc0&url=https%3a%2f%2fwww.mac4ever.com%2fmac%2f199267-grosses-promos-sur-les-macbook-pro-m5-pro-max-jusqu-a-1100-par-rapport-a-l-apple-store&c=13352536382815107599&mkt=fr-fr",
+      "sourceUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b066eb2ad1d4dac86c26a6daa668dc0&url=https%3a%2f%2fwww.mac4ever.com%2fmac%2f199267-grosses-promos-sur-les-macbook-pro-m5-pro-max-jusqu-a-1100-par-rapport-a-l-apple-store&c=13352536382815107599&mkt=fr-fr",
       "source": "Actualités",
       "title": "Grosses promos sur les MacBook Pro M5 Pro/Max : jusqu'à -1100€ par rapport à l'Apple Store !",
       "merchantUrl": null,
@@ -424,8 +424,8 @@
       "fromRetailer": false,
       "temperature": null,
       "foundAt": "2026-11-24T22:44:37.679Z",
-      "checkedAt": "2026-11-24T22:44:37.679Z",
-      "lastSeen": "2026-11-24T22:44:37.679Z",
+      "checkedAt": "2026-11-25T05:14:15.058Z",
+      "lastSeen": "2026-11-25T05:14:15.058Z",
       "verifyNote": "Non vérifiable automatiquement (pas de lien vers le vendeur) : pas de notification.",
       "note": "RAM non précisée : 24 Go minimum sur cette puce. Non vérifiable automatiquement (pas de lien vers le vendeur) : pas de notification."
     }
