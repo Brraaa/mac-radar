@@ -450,6 +450,7 @@ async function main() {
     const old = byId.get(id);
     const rec = {
       ...(old || {}),
+      prevStatus: old ? old.status : null,
       id, chip: d.chip, gen: d.gen, tier: d.tier, cpuGpu: d.cpuGpu || (old && old.cpuGpu) || null,
       size: d.size || (old && old.size) || null, ram: d.ram, ramInferred: !!d.ramInferred, storage: d.storage || (old && old.storage) || null,
       price: d.price, oldPrice: d.oldPrice || (old && old.oldPrice) || null,
@@ -508,7 +509,8 @@ async function main() {
     const k = `${rec.id}`;
     const prevNotif = seen.keys[k];
     const prevPrice = seen.prices ? seen.prices[k] : null;
-    if (!prevNotif || (prevPrice && rec.price <= prevPrice - 50)) fresh.push(rec);
+    const backInStock = rec.prevStatus === "expired";   // revenue en stock après avoir disparu
+    if (!prevNotif || backInStock || (prevPrice && rec.price <= prevPrice - 50)) fresh.push(rec);
     seen.keys[k] = NOW.toISOString(); seen.prices = seen.prices || {}; seen.prices[k] = Math.min(rec.price, prevPrice || Infinity);
   }
 
@@ -528,7 +530,7 @@ async function main() {
 
   // Notifications
   const messages = fresh.slice(0, 5).map((d) => ({
-    title: `🔥 ${d.chip} ${d.size ? d.size + "″ " : ""}à ${Math.round(d.price).toLocaleString("fr-FR")} €`,
+    title: `${d.prevStatus === "expired" ? "🔁 De retour : " : "🔥 "}${d.chip} ${d.size ? d.size + "″ " : ""}à ${Math.round(d.price).toLocaleString("fr-FR")} €`,
     body: `MacBook Pro ${d.ram} Go${d.storage ? " / " + d.storage : ""} chez ${d.merchant}${d.condition === "reco-apple" ? " (reconditionné Apple)" : ""}${d.oldPrice ? ` au lieu de ${Math.round(d.oldPrice).toLocaleString("fr-FR")} €` : ""}. En stock, vérifié à l'instant.`,
     url: d.url || APP_URL, tag: d.id,
   }));
