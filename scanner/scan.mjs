@@ -470,7 +470,9 @@ async function main() {
   // Reconditionné Apple absent de la page = vendu ; autres sources non revues depuis 48 h = expirées
   const appleOk = sources["Apple Reconditionné"] && sources["Apple Reconditionné"].ok;
   for (const d of byId.values()) {
-    if (seenThisRun.has(d.id) || d.status === "expired") continue;
+    if (seenThisRun.has(d.id)) continue;
+    d.prevStatus = d.status;
+    if (d.status === "expired") continue;
     const age = NOW - new Date(d.lastSeen || d.checkedAt || 0);
     if (d.condition === "reco-apple" && appleOk) { d.status = "expired"; d.checkedAt = NOW.toISOString(); d.verifyNote = "N'est plus en vente sur l'Apple Store."; }
     else if (age > 48 * 3600e3) { d.status = "expired"; d.checkedAt = NOW.toISOString(); }
