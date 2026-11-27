@@ -546,7 +546,7 @@ async function sendPushes(subs, messages) {
   for (const s of subs) {
     let gone = false;
     for (const msg of messages) {
-      try { await webpush.sendNotification(s, JSON.stringify(msg), { TTL: 3600, urgency: "high" }); }
+      try { await webpush.sendNotification(s, JSON.stringify(msg), { TTL: 6 * 3600, urgency: "high" }); }
       catch (e) { console.log(`Push échoué (${e.statusCode || ""}) : ${e.body || e.message}`); if (e.statusCode === 404 || e.statusCode === 410) { gone = true; break; } }
     }
     if (!gone) alive.push(s);

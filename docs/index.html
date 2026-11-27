@@ -332,7 +332,7 @@ footer { font-size: 12px; color: var(--muted); text-align: center; }
 
     var stEl = $("status");
     if (state.meta && state.meta.lastScan) {
-      var stale = Date.now() - Date.parse(state.meta.lastScan) > 90 * 60 * 1000;
+      var stale = Date.now() - Date.parse(state.meta.lastScan) > 45 * 60 * 1000;
       stEl.innerHTML = '<span><span class="dot' + (stale ? " stale" : "") + '"></span>' + (stale ? "Scan en retard" : "Radar actif") + ' · dernier scan ' + esc(ago(state.meta.lastScan)) + '</span>' +
         (state.meta.summary ? '<span>· ' + esc(state.meta.summary) + '</span>' : "");
     } else if (state.loaded) stEl.innerHTML = '<span><span class="dot stale"></span>En attente du premier scan</span>';

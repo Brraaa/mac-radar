@@ -1,8 +1,12 @@
 name: Scan des offres MacBook Pro
 
 on:
+  # Déclencheur principal : cron-job.org appelle l'API GitHub toutes les 20 min (fiable)
+  repository_dispatch:
+    types: [scan]
+  # Secours : le planificateur de GitHub (souvent en retard de plusieurs heures)
   schedule:
-    - cron: "*/20 * * * *"
+    - cron: "7,27,47 * * * *"
   workflow_dispatch:
     inputs:
       test_push:

@@ -14,3 +14,16 @@ Radar à bons plans MacBook Pro : puce M3/M4/M5 **Pro ou Max**, **24 Go** de RAM
 3. Le workflow `subscribe.yml` enregistre le téléphone et envoie une notification de test.
 
 La clé privée des notifications est dans le secret `VAPID_PRIVATE_KEY` du dépôt.
+
+## Déclenchement fiable toutes les 20 minutes
+
+Le planificateur intégré de GitHub saute beaucoup d'exécutions sur les petits dépôts. Le scan est donc lancé de l'extérieur par **cron-job.org**, qui appelle :
+
+```
+POST https://api.github.com/repos/Brraaa/mac-radar/dispatches
+Authorization: Bearer <jeton GitHub à grain fin, accès « Contents : Read and write » sur mac-radar uniquement>
+Accept: application/vnd.github+json
+Body : {"event_type":"scan"}
+```
+
+Réponse attendue : `204`.
