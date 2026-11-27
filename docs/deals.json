@@ -1,12 +1,12 @@
 {
-  "lastScan": "2026-11-27T22:13:21.847Z",
+  "lastScan": "2026-11-27T22:32:29.913Z",
   "summary": "1 offre dans le budget",
   "budget": 2600,
   "minRam": 24,
   "sources": {
     "Apple Reconditionné": {
       "ok": true,
-      "count": 29
+      "count": 26
     },
     "Dealabs": {
       "ok": true,
@@ -50,7 +50,8 @@
       "listingInStock": false,
       "fromRetailer": false,
       "verifiedAt": "2026-11-25T05:14:15.058Z",
-      "verifyNote": "N'est plus en vente sur l'Apple Store."
+      "verifyNote": "N'est plus en vente sur l'Apple Store.",
+      "prevStatus": "expired"
     },
     {
       "id": "ldlc-m5pro-14-24-1to-2899",
@@ -73,12 +74,13 @@
       "temperature": null,
       "note": null,
       "foundAt": "2026-11-23T14:55:13.773Z",
-      "checkedAt": "2026-11-27T22:13:21.847Z",
-      "lastSeen": "2026-11-27T22:13:21.847Z",
+      "checkedAt": "2026-11-27T22:32:29.913Z",
+      "lastSeen": "2026-11-27T22:32:29.913Z",
       "ramInferred": false,
       "merchantUrl": "https://www.ldlc.com/fiche/PB00729170.html",
       "listingInStock": true,
-      "fromRetailer": true
+      "fromRetailer": true,
+      "prevStatus": "to_verify"
     },
     {
       "id": "boulanger-m5pro-14-24-1to-2599",
@@ -101,15 +103,16 @@
       "temperature": 371,
       "note": "Plus disponible : en rupture de stock.",
       "foundAt": "2026-11-23T14:57:23.775Z",
-      "checkedAt": "2026-11-27T22:13:21.847Z",
-      "lastSeen": "2026-11-27T22:13:21.847Z",
+      "checkedAt": "2026-11-27T22:32:29.913Z",
+      "lastSeen": "2026-11-27T22:32:29.913Z",
       "ramInferred": false,
       "merchantUrl": "https://www.dealabs.com/visit/threadmain/3463391",
       "listingInStock": false,
       "fromRetailer": false,
       "verifiedAt": "2026-11-25T05:14:15.058Z",
       "verifiedUrl": "https://www.boulanger.com/ref/1235629",
-      "verifyNote": "Plus disponible : en rupture de stock."
+      "verifyNote": "Plus disponible : en rupture de stock.",
+      "prevStatus": "expired"
     },
     {
       "id": "materiel-net-m5pro-14-24-1to-2899",
@@ -133,7 +136,8 @@
       "note": null,
       "foundAt": "2026-11-23T14:59:29.130Z",
       "checkedAt": "2026-11-25T15:44:23.053Z",
-      "lastSeen": "2026-11-23T14:59:29.130Z"
+      "lastSeen": "2026-11-23T14:59:29.130Z",
+      "prevStatus": "expired"
     },
     {
       "id": "boulanger-m5pro-16-24-1to-2999",
@@ -157,7 +161,8 @@
       "note": null,
       "foundAt": "2026-11-23T14:59:29.130Z",
       "checkedAt": "2026-11-25T15:44:23.053Z",
-      "lastSeen": "2026-11-23T14:59:29.130Z"
+      "lastSeen": "2026-11-23T14:59:29.130Z",
+      "prevStatus": "expired"
     },
     {
       "id": "boulanger-m5pro-14-24-1to-2694",
@@ -181,7 +186,8 @@
       "note": null,
       "foundAt": "2026-11-23T14:59:29.130Z",
       "checkedAt": "2026-11-25T15:44:23.053Z",
-      "lastSeen": "2026-11-23T14:59:29.130Z"
+      "lastSeen": "2026-11-23T14:59:29.130Z",
+      "prevStatus": "expired"
     },
     {
       "id": "boulanger-m5pro-14-24-2to-2999",
@@ -205,7 +211,8 @@
       "note": null,
       "foundAt": "2026-11-23T14:59:29.130Z",
       "checkedAt": "2026-11-25T15:44:23.053Z",
-      "lastSeen": "2026-11-23T14:59:29.130Z"
+      "lastSeen": "2026-11-23T14:59:29.130Z",
+      "prevStatus": "expired"
     },
     {
       "id": "fnac-m5pro-14-24-1to-2564",
@@ -231,7 +238,8 @@
       "checkedAt": "2026-11-24T02:00:10.377Z",
       "lastSeen": "2026-11-23T14:59:29.130Z",
       "listingInStock": false,
-      "verifyNote": "Plus disponible : prix remonté à 2699 €."
+      "verifyNote": "Plus disponible : prix remonté à 2699 €.",
+      "prevStatus": "expired"
     },
     {
       "id": "fnac-m5pro-14-24-1to-2699",
@@ -254,12 +262,13 @@
       "temperature": null,
       "note": null,
       "foundAt": "2026-11-23T14:59:29.130Z",
-      "checkedAt": "2026-11-27T22:13:21.847Z",
-      "lastSeen": "2026-11-27T22:13:21.847Z",
+      "checkedAt": "2026-11-27T22:32:29.913Z",
+      "lastSeen": "2026-11-27T22:32:29.913Z",
       "ramInferred": false,
       "merchantUrl": "https://www.fnac.com/Apple-MacBook-Pro-14-1-To-SSD-24-Go-RAM-Puce-M5-Pro-CPU-15-coeurs-GPU-16-coeurs-Noir-sideral/a21322761/w-4",
       "listingInStock": true,
-      "fromRetailer": true
+      "fromRetailer": true,
+      "prevStatus": "to_verify"
     },
     {
       "id": "fnac-m5pro-16-24-1to-2849",
@@ -283,7 +292,8 @@
       "note": null,
       "foundAt": "2026-11-23T14:59:29.130Z",
       "checkedAt": "2026-11-25T15:44:23.053Z",
-      "lastSeen": "2026-11-23T14:59:29.130Z"
+      "lastSeen": "2026-11-23T14:59:29.130Z",
+      "prevStatus": "expired"
     },
     {
       "id": "fnac-m5pro-16-24-1to-2999",
@@ -311,7 +321,8 @@
       "foundAt": "2026-11-23T15:15:40.794Z",
       "checkedAt": "2026-11-26T07:59:51.505Z",
       "lastSeen": "2026-11-24T02:00:10.377Z",
-      "note": null
+      "note": null,
+      "prevStatus": "expired"
     },
     {
       "id": "fnac-m4pro-16-24-512go-2779",
@@ -337,9 +348,10 @@
       "fromRetailer": true,
       "temperature": null,
       "foundAt": "2026-11-23T15:15:40.794Z",
-      "checkedAt": "2026-11-27T22:13:21.847Z",
-      "lastSeen": "2026-11-27T22:13:21.847Z",
-      "note": null
+      "checkedAt": "2026-11-27T22:32:29.913Z",
+      "lastSeen": "2026-11-27T22:32:29.913Z",
+      "note": null,
+      "prevStatus": "expired"
     },
     {
       "id": "apple-reconditionne-m4pro-16-24-512go-2499",
@@ -365,11 +377,12 @@
       "fromRetailer": false,
       "temperature": null,
       "foundAt": "2026-11-24T22:44:37.679Z",
-      "checkedAt": "2026-11-27T22:13:21.847Z",
-      "lastSeen": "2026-11-27T22:13:21.847Z",
-      "verifiedAt": "2026-11-27T22:13:21.847Z",
+      "checkedAt": "2026-11-27T22:32:29.913Z",
+      "lastSeen": "2026-11-27T22:32:29.913Z",
+      "verifiedAt": "2026-11-27T22:32:29.913Z",
       "verifyNote": "En vente sur l'Apple Store (reconditionné) au moment du scan.",
-      "note": "En vente sur l'Apple Store (reconditionné) au moment du scan."
+      "note": "En vente sur l'Apple Store (reconditionné) au moment du scan.",
+      "prevStatus": "active"
     },
     {
       "id": "mac4ever-m5pro-x-24-x-1100",
@@ -395,10 +408,11 @@
       "fromRetailer": false,
       "temperature": null,
       "foundAt": "2026-11-24T22:44:37.679Z",
-      "checkedAt": "2026-11-27T22:13:21.847Z",
+      "checkedAt": "2026-11-27T22:32:29.913Z",
       "lastSeen": "2026-11-26T07:59:51.505Z",
       "verifyNote": "Non vérifiable automatiquement (pas de lien vers le vendeur) : pas de notification.",
-      "note": "RAM non précisée : 24 Go minimum sur cette puce. Non vérifiable automatiquement (pas de lien vers le vendeur) : pas de notification."
+      "note": "RAM non précisée : 24 Go minimum sur cette puce. Non vérifiable automatiquement (pas de lien vers le vendeur) : pas de notification.",
+      "prevStatus": "to_verify"
     },
     {
       "id": "actualites-m5pro-x-24-x-1100",
@@ -424,10 +438,11 @@
       "fromRetailer": false,
       "temperature": null,
       "foundAt": "2026-11-24T22:44:37.679Z",
-      "checkedAt": "2026-11-27T22:13:21.847Z",
+      "checkedAt": "2026-11-27T22:32:29.913Z",
       "lastSeen": "2026-11-26T07:59:51.505Z",
       "verifyNote": "Non vérifiable automatiquement (pas de lien vers le vendeur) : pas de notification.",
-      "note": "RAM non précisée : 24 Go minimum sur cette puce. Non vérifiable automatiquement (pas de lien vers le vendeur) : pas de notification."
+      "note": "RAM non précisée : 24 Go minimum sur cette puce. Non vérifiable automatiquement (pas de lien vers le vendeur) : pas de notification.",
+      "prevStatus": "to_verify"
     },
     {
       "id": "apple-reconditionne-m4pro-14-24-512go-2059",
@@ -457,7 +472,8 @@
       "lastSeen": "2026-11-27T01:54:59.425Z",
       "verifiedAt": "2026-11-27T01:54:59.425Z",
       "verifyNote": "N'est plus en vente sur l'Apple Store.",
-      "note": "N'est plus en vente sur l'Apple Store."
+      "note": "N'est plus en vente sur l'Apple Store.",
+      "prevStatus": "expired"
     },
     {
       "id": "apple-reconditionne-m5pro-16-24-1to-2889",
@@ -483,11 +499,12 @@
       "fromRetailer": false,
       "temperature": null,
       "foundAt": "2026-11-26T18:20:21.799Z",
-      "checkedAt": "2026-11-27T22:13:21.847Z",
-      "lastSeen": "2026-11-27T22:13:21.847Z",
-      "verifiedAt": "2026-11-27T22:13:21.847Z",
+      "checkedAt": "2026-11-27T22:32:29.913Z",
+      "lastSeen": "2026-11-27T22:32:29.913Z",
+      "verifiedAt": "2026-11-27T22:32:29.913Z",
       "verifyNote": "En vente sur l'Apple Store (reconditionné) au moment du scan.",
-      "note": "En vente sur l'Apple Store (reconditionné) au moment du scan."
+      "note": "En vente sur l'Apple Store (reconditionné) au moment du scan.",
+      "prevStatus": "active"
     }
   ]
 }
