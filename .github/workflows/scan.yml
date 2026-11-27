@@ -20,6 +20,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: scan
@@ -28,8 +29,10 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     steps:
+      - name: Heure de départ
+        run: echo "START=$(date +%s)" >> "$GITHUB_ENV"
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -52,3 +55,18 @@ jobs:
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Scan $(date -u +%Y-%m-%dT%H:%MZ)"
           for i in 1 2 3; do git pull --rebase --autostash && git push && break; sleep 5; done
+      - name: Programmer le prochain scan (dans 20 min)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          wait=$(( 1140 - ($(date +%s) - START) ))
+          if [ "$wait" -gt 0 ]; then sleep "$wait"; fi
+          others=$(gh run list -R "$GITHUB_REPOSITORY" --workflow scan.yml --limit 20 --json databaseId,status \
+            --jq "[.[] | select(.databaseId != ${{ github.run_id }} and (.status == \"queued\" or .status == \"in_progress\" or .status == \"waiting\" or .status == \"pending\" or .status == \"requested\"))] | length")
+          if [ "${others:-0}" -eq 0 ]; then
+            gh workflow run scan.yml -R "$GITHUB_REPOSITORY" --ref main
+            echo "Prochain scan lancé."
+          else
+            echo "Un autre scan est déjà prévu : rien à faire."
+          fi
