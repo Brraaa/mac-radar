@@ -1,5 +1,5 @@
 {
-  "lastScan": "2026-11-28T12:54:11.222Z",
+  "lastScan": "2026-11-28T13:13:23.837Z",
   "summary": "1 offre dans le budget",
   "budget": 2600,
   "minRam": 24,
@@ -18,7 +18,7 @@
     },
     "Revendeurs": {
       "ok": true,
-      "count": 49
+      "count": 29
     }
   },
   "deals": [
@@ -74,8 +74,8 @@
       "temperature": null,
       "note": null,
       "foundAt": "2026-11-23T14:55:13.773Z",
-      "checkedAt": "2026-11-28T12:54:11.222Z",
-      "lastSeen": "2026-11-28T12:54:11.222Z",
+      "checkedAt": "2026-11-28T13:13:23.837Z",
+      "lastSeen": "2026-11-28T13:13:23.837Z",
       "ramInferred": false,
       "merchantUrl": "https://www.ldlc.com/fiche/PB00729170.html",
       "listingInStock": true,
@@ -103,8 +103,8 @@
       "temperature": 371,
       "note": "Plus disponible : en rupture de stock.",
       "foundAt": "2026-11-23T14:57:23.775Z",
-      "checkedAt": "2026-11-28T12:54:11.222Z",
-      "lastSeen": "2026-11-28T12:54:11.222Z",
+      "checkedAt": "2026-11-28T13:13:23.837Z",
+      "lastSeen": "2026-11-28T13:13:23.837Z",
       "ramInferred": false,
       "merchantUrl": "https://www.dealabs.com/visit/threadmain/3463391",
       "listingInStock": false,
@@ -377,9 +377,9 @@
       "fromRetailer": false,
       "temperature": null,
       "foundAt": "2026-11-24T22:44:37.679Z",
-      "checkedAt": "2026-11-28T12:54:11.222Z",
-      "lastSeen": "2026-11-28T12:54:11.222Z",
-      "verifiedAt": "2026-11-28T12:54:11.222Z",
+      "checkedAt": "2026-11-28T13:13:23.837Z",
+      "lastSeen": "2026-11-28T13:13:23.837Z",
+      "verifiedAt": "2026-11-28T13:13:23.837Z",
       "verifyNote": "En vente sur l'Apple Store (reconditionné) au moment du scan.",
       "note": "En vente sur l'Apple Store (reconditionné) au moment du scan.",
       "prevStatus": "active"
@@ -499,9 +499,9 @@
       "fromRetailer": false,
       "temperature": null,
       "foundAt": "2026-11-26T18:20:21.799Z",
-      "checkedAt": "2026-11-28T12:54:11.222Z",
-      "lastSeen": "2026-11-28T12:54:11.222Z",
-      "verifiedAt": "2026-11-28T12:54:11.222Z",
+      "checkedAt": "2026-11-28T13:13:23.837Z",
+      "lastSeen": "2026-11-28T13:13:23.837Z",
+      "verifiedAt": "2026-11-28T13:13:23.837Z",
       "verifyNote": "En vente sur l'Apple Store (reconditionné) au moment du scan.",
       "note": "En vente sur l'Apple Store (reconditionné) au moment du scan.",
       "prevStatus": "active"
